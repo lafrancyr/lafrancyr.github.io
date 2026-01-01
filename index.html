@@ -2064,575 +2064,657 @@ section {
         </div>
     </footer>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-    
-    <!-- Custom JavaScript -->
-    <script type="text/javascript">
+<!-- JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 
-        // script.js - Premium Version
-document.addEventListener('DOMContentLoaded', function() {
-    
-    // ============ INITIALIZATION ============
-    AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 100,
-        easing: 'ease-in-out'
-    });
-    
-    // ============ LOADING SCREEN ============
-    const loadingScreen = document.getElementById('loadingScreen');
-    
-    // Simulate loading with minimum time for smooth experience
-    setTimeout(() => {
-        loadingScreen.classList.add('hidden');
+<!-- Custom JavaScript -->
+<script type="text/javascript">
+    // script.js - Premium Version
+    document.addEventListener('DOMContentLoaded', function() {
         
-        // Remove from DOM after animation
-        setTimeout(() => {
-            loadingScreen.style.display = 'none';
-        }, 800);
-    }, 1500);
-    
-    // ============ NAVBAR SCROLL EFFECT ============
-    const navbar = document.getElementById('mainNav');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-    
-    // ============ SMOOTH SCROLL ============
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
+        // ============ INITIALIZATION ============
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+            easing: 'ease-in-out'
+        });
+        
+        // ============ LOADING SCREEN ============
+        const loadingScreen = document.getElementById('loadingScreen');
+        
+        if (loadingScreen) {
+            // Simulate loading with minimum time for smooth experience
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
                 
-                // Close mobile menu if open
-                const navbarToggler = document.querySelector('.navbar-toggler');
-                const navbarCollapse = document.querySelector('.navbar-collapse');
-                if (navbarCollapse.classList.contains('show')) {
-                    navbarToggler.click();
+                // Remove from DOM after animation
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 800);
+            }, 1500);
+        }
+        
+        // ============ NAVBAR SCROLL EFFECT ============
+        const navbar = document.getElementById('mainNav');
+        
+        if (navbar) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        }
+        
+        // ============ SMOOTH SCROLL ============
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const navbarToggler = document.querySelector('.navbar-toggler');
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarToggler && navbarCollapse && navbarCollapse.classList.contains('show')) {
+                        navbarToggler.click();
+                    }
+                }
+            });
+        });
+        
+        // ============ PRODUCT DATA PREMIUM ============
+        const products = [
+            // ===== MAKE-UP =====
+            {
+                id: 1,
+                name: "Mascara Intense Metamorphose",
+                category: "makeup",
+                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/51685-mascara-intense-metamorphose-waterproof-yves-rocher.png?itok=EwQPJwdR",
+                badge: "24H",
+                description: "Mascara 3 in 1 da 7,8 ml che dona volume estremo, lunghezza e curvatura intensa con tenuta fino a 24 ore. Adatto a occhi sensibili e portatori di lenti a contatto.",
+                ingredients: ["Acqua di Fiordaliso Bio", "Olio di Ricino"],
+                benefits: ["Volume estremo", "Lunghezza intensa", "Curvatura definita", "Occhi sensibili"],
+                price: ""
+            },
+            {
+                id: 2,
+                name: "Teint Radiance Fondotinta Siero Natural Glow",
+                category: "makeup",
+                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-09/84919-neutre-200-tein-radiance-fondotinta-make-up-yves-rocher.png?itok=vOymFafo",
+                badge: "GLOW",
+                description: "Siero fondotinta da 30 ml che unisce make-up e skincare per una pelle più luminosa giorno dopo giorno.",
+                ingredients: ["Attivi skincare", "Pigmenti luminosi"],
+                benefits: ["Effetto naturale", "Luminosità", "Texture leggera"],
+                price: ""
+            },
+            {
+                id: 3,
+                name: "Fondotinta Opacizzante Super Mat",
+                category: "makeup",
+                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2022-02/p85117f.jpg?itok=VwubW3Qj",
+                badge: "OPACIZZANTE",
+                description: "Fondotinta opacizzante da 30 ml con coprenza modulabile e tenuta fino a 16 ore.",
+                ingredients: ["Pigmenti minerali", "Attivi opacizzanti"],
+                benefits: ["Effetto mat", "Riduce i pori", "Tenuta 16h"],
+                price: ""
+            },
+            {
+                id: 4,
+                name: "Fondotinta Zéro Défaut Idratazione 24H",
+                category: "makeup",
+                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-11/43903-rose-000-fondotinta-lunga-tenuta-zero-defaut-idratazione-24h-make-up-trucco-yves-rocher.png?itok=k7ooIacN",
+                badge: "24H",
+                description: "Fondotinta da 30 ml con coprenza media-alta modulabile e idratazione fino a 24 ore.",
+                ingredients: ["Attivi idratanti", "Pigmenti leviganti"],
+                benefits: ["Idratazione 24h", "Incarnato uniforme"],
+                price: ""
+            },
+            {
+                id: 5,
+                name: "Ombretto Lunga Tenuta",
+                category: "makeup",
+                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/40878-ombretto-lunga-tenuta-sable-dore-yves-rocher.png?itok=oyG-kyPJ",
+                badge: "LONG LASTING",
+                description: "Ombretto stylo da 1,4 g con colore intenso e madreperlato sin dalla prima applicazione.",
+                ingredients: ["Pigmenti madreperlati"],
+                benefits: ["Colore intenso", "Lunga tenuta"],
+                price: ""
+            },
+            {
+                id: 6,
+                name: "Grand Rouge L'Elixir",
+                category: "makeup",
+                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/17848-grand-rouge-elixir-nude-101-yves-rocher.png?itok=Xu29MJN8",
+                badge: "ICONICO",
+                description: "Rossetto da 7 ml con superconcentrato di attivi e colore ultra pigmentato.",
+                ingredients: ["Attivi nutrienti"],
+                benefits: ["Colore intenso", "Comfort labbra"],
+                price: ""
+            },
+            {
+                id: 7,
+                name: "Rouge Elixir Mat",
+                category: "makeup",
+                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/83036-rossetto-rouge-elixir-mat-01-yves-rocher.png?itok=cx3_Cx6P",
+                badge: "MAT",
+                description: "Rossetto mat da 3,7 g con 83% di ingredienti di origine naturale. Disponibile in 12 colori.",
+                ingredients: ["Ingredienti di origine naturale"],
+                benefits: ["Effetto mat", "Alta pigmentazione"],
+                price: ""
+            },
+            {
+                id: 8,
+                name: "Stylo Sopracciglia Alta Precisione",
+                category: "makeup",
+                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/89025-stylo-sopracciglia-alta-precisione-02-cendre-yves-rocher.png?itok=cKv4MmP0",
+                badge: "PRECISIONE",
+                description: "Stylo sopracciglia da 1 g con micro-mina e spazzolina per un risultato naturale.",
+                ingredients: ["Pigmenti naturali"],
+                benefits: ["Alta precisione", "Effetto naturale"],
+                price: ""
+            },
+
+            // ===== SKINCARE =====
+            {
+                id: 9,
+                name: "Lift Pro-Collagène Crema Anti-Rughe Notte",
+                category: "skincare",
+                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-11/46807-trattamento-anti-rughe-intenso-giorno-notte-lift-pro-collage%CC%80ne-yves-rocher.png?itok=jdRgOEaI",
+                badge: "BESTSELLER",
+                description: "Crema notte anti-rughe con Erba Cristallina Bio, Collagene Vegetale e Acido Ialuronico di origine naturale.",
+                ingredients: ["Erba Cristallina Bio", "Collagene Vegetale", "Acido Ialuronico"],
+                benefits: ["Effetto lifting", "Riduzione rughe in 4 settimane", "98% origine naturale"],
+                price: ""
+            },
+            {
+                id: 10,
+                name: "Set Viso Lift Pro-Collagène Completo",
+                category: "skincare",
+                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-08/y12350-set-viso-lift-pro-collage%CC%80ne-yves-rocher.png?itok=aF0tt0IL",
+                badge: "OFFERTA",
+                description: "Set viso anti-age con crema giorno, crema notte e siero per un trattamento completo.",
+                ingredients: [],
+                benefits: ["3 prodotti", "Formula vegan"],
+                price: ""
+            },
+            {
+                id: 11,
+                name: "Anti-Age Global Trattamento Rigenerante Supremo",
+                category: "skincare",
+                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/650x650/public/2025-11/56413-trattamento-rigenerante-supremo-giorno-notte-anti-age-global-yves-rocher.png?itok=mswVU9Kw",
+                badge: "NUOVO",
+                description: "Trattamento 3 in 1 che agisce come crema giorno, crema notte e maschera notte.",
+                ingredients: [],
+                benefits: ["Effetto luminosità", "Adatto a tutte le pelli"],
+                price: ""
+            },
+            {
+                id: 12,
+                name: "Pure Algue Gel Detergente Freschezza",
+                category: "skincare",
+                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-08/19045-gel-detergente-freschezza-pure-algue-viso-yves-rocher.png?itok=rsISns3H",
+                description: "Gel detergente ultra-fresco con il 98% di ingredienti di origine naturale.",
+                ingredients: [],
+                benefits: ["Senza sapone", "pH fisiologico"],
+                price: ""
+            },
+            {
+                id: 13,
+                name: "Glow Energie Maschera Peeling Luminosità",
+                category: "skincare",
+                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-08/91955-maschera-peeling-luminosita%CC%80-glow-energie-viso-yves-rocher.png?itok=cybNV_KK",
+                badge: "POPOLARE",
+                description: "Maschera peeling illuminante con AHA naturali e Nasturzio Arancione.",
+                ingredients: ["AHA naturali", "Nasturzio Arancione"],
+                benefits: ["Effetto glow immediato", "Applicazione 5 minuti"],
+                price: ""
+            },
+
+            // ===== CORPO & CAPELLI =====
+            {
+                id: 14,
+                name: "Monoï Shampoo Doccia Delicato",
+                category: "capelli",
+                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/08907-Shampoo-doccia-delicato-monoi-yves-rocher.png?itok=m_JlWwBx",
+                description: "Shampoo doccia profumato al Monoï per pelle e capelli.",
+                ingredients: [],
+                benefits: ["Doppio uso", "Formula delicata"],
+                price: ""
+            },
+            {
+                id: 15,
+                name: "Burro Soufflé Corpo Ultra Nutriente",
+                category: "corpo",
+                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/05473-burro-souffle%CC%81-corpo-ultra-nutriente-yves-rocher.png?itok=UW4WTg9w",
+                badge: "IDRATAZIONE",
+                description: "Crema corpo ultra nutriente con burro di Karité e idratazione fino a 48 ore.",
+                ingredients: ["Burro di Karité"],
+                benefits: ["Idratazione 48h", "Texture non unta"],
+                price: ""
+            },
+            {
+                id: 16,
+                name: "Purezza Shampoo Secco Purificante",
+                category: "capelli",
+                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-08/93820-shampoo-secco-purificante-linea-purezza-capelli-yves-rocher.png?itok=jpkgg4yZ",
+                badge: "PRATICO",
+                description: "Shampoo secco purificante che assorbe il sebo in 30 secondi.",
+                ingredients: [],
+                benefits: ["Senza risciacquo", "Volume immediato"],
+                price: ""
+            },
+
+            // ===== OFFERTE =====
+            {
+                id: 17,
+                name: "Set Corpo & Mani Regalo",
+                category: "offerte",
+                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-08/y12354-set-corpo-mani-yves-rocher.png?itok=0FGSyjbB",
+                badge: "REGALO",
+                description: "Set regalo con prodotti corpo e mani in confezione speciale.",
+                ingredients: [],
+                benefits: ["Ideale come regalo", "Confezione inclusa"],
+                price: ""
+            }
+        ];
+        
+        // ============ PRODUCT RENDERING PREMIUM ============
+        const productGrid = document.getElementById('productGrid');
+        const productSearch = document.getElementById('productSearch');
+        const filterButtons = document.querySelectorAll('.tag-btn');
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        
+        let displayedProducts = 4;
+        let currentFilter = 'all';
+        
+        function renderProducts(filter = 'all', searchTerm = '') {
+            if (!productGrid) return;
+            
+            productGrid.innerHTML = '';
+            
+            const filteredProducts = products.filter(product => {
+                const matchesFilter = filter === 'all' || product.category === filter;
+                const matchesSearch = searchTerm === '' || 
+                    product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    product.category.toLowerCase().includes(searchTerm.toLowerCase());
+                
+                return matchesFilter && matchesSearch;
+            });
+            
+            // Show only limited number of products initially
+            const productsToShow = filteredProducts.slice(0, displayedProducts);
+            
+            productsToShow.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card-elegant';
+                productCard.setAttribute('data-category', product.category);
+                productCard.setAttribute('data-aos', 'fade-up');
+                
+                productCard.innerHTML = `
+                    ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">${product.category.toUpperCase()}</div>
+                        <h3 class="product-name">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                
+                        <div class="product-actions">
+                            <button class="btn-details-elegant view-product" data-id="${product.id}">
+                                <i class="fas fa-eye"></i>
+                                <span>Dettagli</span>
+                            </button>
+                            <a href="https://wa.me/393332338660?text=Salve%20Francesca,%20vorrei%20informazioni%20su%20${encodeURIComponent(product.name)}" 
+                               class="btn-whatsapp-elegant" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                `;
+                
+                productGrid.appendChild(productCard);
+            });
+            
+            // Show/hide load more button
+            if (loadMoreBtn) {
+                if (filteredProducts.length > displayedProducts) {
+                    loadMoreBtn.style.display = 'inline-flex';
+                } else {
+                    loadMoreBtn.style.display = 'none';
                 }
             }
-        });
-    });
-    
-    // ============ PRODUCT DATA PREMIUM ============
-    const products = [
-    // ===== MAKE-UP =====
-    {
-        id: 1,
-        name: "Mascara Intense Metamorphose",
-        category: "makeup",
-        image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/51685-mascara-intense-metamorphose-waterproof-yves-rocher.png?itok=EwQPJwdR",
-        badge: "24H",
-        description: "Mascara 3 in 1 da 7,8 ml che dona volume estremo, lunghezza e curvatura intensa con tenuta fino a 24 ore. Adatto a occhi sensibili e portatori di lenti a contatto.",
-        ingredients: ["Acqua di Fiordaliso Bio", "Olio di Ricino"],
-        benefits: ["Volume estremo", "Lunghezza intensa", "Curvatura definita", "Occhi sensibili"]
-    },
-    {
-        id: 2,
-        name: "Teint Radiance Fondotinta Siero Natural Glow",
-        category: "makeup",
-        image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-09/84919-neutre-200-tein-radiance-fondotinta-make-up-yves-rocher.png?itok=vOymFafo",
-        badge: "GLOW",
-        description: "Siero fondotinta da 30 ml che unisce make-up e skincare per una pelle più luminosa giorno dopo giorno.",
-        ingredients: ["Attivi skincare", "Pigmenti luminosi"],
-        benefits: ["Effetto naturale", "Luminosità", "Texture leggera"]
-    },
-    {
-        id: 3,
-        name: "Fondotinta Opacizzante Super Mat",
-        category: "makeup",
-        image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2022-02/p85117f.jpg?itok=VwubW3Qj",
-        badge: "OPACIZZANTE",
-        description: "Fondotinta opacizzante da 30 ml con coprenza modulabile e tenuta fino a 16 ore.",
-        ingredients: ["Pigmenti minerali", "Attivi opacizzanti"],
-        benefits: ["Effetto mat", "Riduce i pori", "Tenuta 16h"]
-    },
-    {
-        id: 4,
-        name: "Fondotinta Zéro Défaut Idratazione 24H",
-        category: "makeup",
-        image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-11/43903-rose-000-fondotinta-lunga-tenuta-zero-defaut-idratazione-24h-make-up-trucco-yves-rocher.png?itok=k7ooIacN",
-        badge: "24H",
-        description: "Fondotinta da 30 ml con coprenza media-alta modulabile e idratazione fino a 24 ore.",
-        ingredients: ["Attivi idratanti", "Pigmenti leviganti"],
-        benefits: ["Idratazione 24h", "Incarnato uniforme"]
-    },
-    {
-        id: 5,
-        name: "Ombretto Lunga Tenuta",
-        category: "makeup",
-        image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/40878-ombretto-lunga-tenuta-sable-dore-yves-rocher.png?itok=oyG-kyPJ",
-        badge: "LONG LASTING",
-        description: "Ombretto stylo da 1,4 g con colore intenso e madreperlato sin dalla prima applicazione.",
-        ingredients: ["Pigmenti madreperlati"],
-        benefits: ["Colore intenso", "Lunga tenuta"]
-    },
-    {
-        id: 6,
-        name: "Grand Rouge L'Elixir",
-        category: "makeup",
-        image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/17848-grand-rouge-elixir-nude-101-yves-rocher.png?itok=Xu29MJN8",
-        badge: "ICONICO",
-        description: "Rossetto da 7 ml con superconcentrato di attivi e colore ultra pigmentato.",
-        ingredients: ["Attivi nutrienti"],
-        benefits: ["Colore intenso", "Comfort labbra"]
-    },
-    {
-        id: 7,
-        name: "Rouge Elixir Mat",
-        category: "makeup",
-        image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/83036-rossetto-rouge-elixir-mat-01-yves-rocher.png?itok=cx3_Cx6P",
-        badge: "MAT",
-        description: "Rossetto mat da 3,7 g con 83% di ingredienti di origine naturale. Disponibile in 12 colori.",
-        ingredients: ["Ingredienti di origine naturale"],
-        benefits: ["Effetto mat", "Alta pigmentazione"]
-    },
-    {
-        id: 8,
-        name: "Stylo Sopracciglia Alta Precisione",
-        category: "makeup",
-        image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/89025-stylo-sopracciglia-alta-precisione-02-cendre-yves-rocher.png?itok=cKv4MmP0",
-        badge: "PRECISIONE",
-        description: "Stylo sopracciglia da 1 g con micro-mina e spazzolina per un risultato naturale.",
-        ingredients: ["Pigmenti naturali"],
-        benefits: ["Alta precisione", "Effetto naturale"]
-    },
-
-    // ===== SKINCARE =====
-    {
-        id: 9,
-        name: "Lift Pro-Collagène Crema Anti-Rughe Notte",
-        category: "skincare",
-        image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-11/46807-trattamento-anti-rughe-intenso-giorno-notte-lift-pro-collage%CC%80ne-yves-rocher.png?itok=jdRgOEaI",
-        badge: "BESTSELLER",
-        description: "Crema notte anti-rughe con Erba Cristallina Bio, Collagene Vegetale e Acido Ialuronico di origine naturale.",
-        features: ["Effetto lifting", "Riduzione rughe in 4 settimane", "98% origine naturale"]
-    },
-    {
-        id: 10,
-        name: "Set Viso Lift Pro-Collagène Completo",
-        category: "skincare",
-        image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-08/y12350-set-viso-lift-pro-collage%CC%80ne-yves-rocher.png?itok=aF0tt0IL",
-        badge: "OFFERTA",
-        description: "Set viso anti-age con crema giorno, crema notte e siero per un trattamento completo.",
-        features: ["3 prodotti", "Formula vegan"]
-    },
-    {
-        id: 11,
-        name: "Anti-Age Global Trattamento Rigenerante Supremo",
-        category: "skincare",
-        image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/650x650/public/2025-11/56413-trattamento-rigenerante-supremo-giorno-notte-anti-age-global-yves-rocher.png?itok=mswVU9Kw",
-        badge: "NUOVO",
-        description: "Trattamento 3 in 1 che agisce come crema giorno, crema notte e maschera notte.",
-        features: ["Effetto luminosità", "Adatto a tutte le pelli"]
-    },
-    {
-        id: 12,
-        name: "Pure Algue Gel Detergente Freschezza",
-        category: "skincare",
-        image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-08/19045-gel-detergente-freschezza-pure-algue-viso-yves-rocher.png?itok=rsISns3H",
-        description: "Gel detergente ultra-fresco con il 98% di ingredienti di origine naturale.",
-        features: ["Senza sapone", "pH fisiologico"]
-    },
-    {
-        id: 13,
-        name: "Glow Energie Maschera Peeling Luminosità",
-        category: "skincare",
-        image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-08/91955-maschera-peeling-luminosita%CC%80-glow-energie-viso-yves-rocher.png?itok=cybNV_KK",
-        badge: "POPOLARE",
-        description: "Maschera peeling illuminante con AHA naturali e Nasturzio Arancione.",
-        features: ["Effetto glow immediato", "Applicazione 5 minuti"]
-    },
-
-    // ===== CORPO & CAPELLI =====
-    {
-        id: 14,
-        name: "Monoï Shampoo Doccia Delicato",
-        category: "capelli",
-        image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/08907-Shampoo-doccia-delicato-monoi-yves-rocher.png?itok=m_JlWwBx",
-        description: "Shampoo doccia profumato al Monoï per pelle e capelli.",
-        features: ["Doppio uso", "Formula delicata"]
-    },
-    {
-        id: 15,
-        name: "Burro Soufflé Corpo Ultra Nutriente",
-        category: "corpo",
-        image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/05473-burro-souffle%CC%81-corpo-ultra-nutriente-yves-rocher.png?itok=UW4WTg9w",
-        badge: "IDRATAZIONE",
-        description: "Crema corpo ultra nutriente con burro di Karité e idratazione fino a 48 ore.",
-        features: ["Idratazione 48h", "Texture non unta"]
-    },
-    {
-        id: 16,
-        name: "Purezza Shampoo Secco Purificante",
-        category: "capelli",
-        image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-08/93820-shampoo-secco-purificante-linea-purezza-capelli-yves-rocher.png?itok=jpkgg4yZ",
-        badge: "PRATICO",
-        description: "Shampoo secco purificante che assorbe il sebo in 30 secondi.",
-        features: ["Senza risciacquo", "Volume immediato"]
-    },
-
-    // ===== OFFERTE =====
-    {
-        id: 17,
-        name: "Set Corpo & Mani Regalo",
-        category: "offerte",
-        image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-08/y12354-set-corpo-mani-yves-rocher.png?itok=0FGSyjbB",
-        badge: "REGALO",
-        description: "Set regalo con prodotti corpo e mani in confezione speciale.",
-        features: ["Ideale come regalo", "Confezione inclusa"]
-    }
-];
-
-    
-    
-    // ============ PRODUCT RENDERING PREMIUM ============
-    const productGrid = document.getElementById('productGrid');
-    const productSearch = document.getElementById('productSearch');
-    const filterButtons = document.querySelectorAll('.tag-btn');
-    const loadMoreBtn = document.getElementById('loadMoreBtn');
-    
-    let displayedProducts = 4;
-    let currentFilter = 'all';
-    
-    function renderProducts(filter = 'all', searchTerm = '') {
-        productGrid.innerHTML = '';
-        
-        const filteredProducts = products.filter(product => {
-            const matchesFilter = filter === 'all' || product.category === filter;
-            const matchesSearch = searchTerm === '' || 
-                product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                product.category.toLowerCase().includes(searchTerm.toLowerCase());
             
-            return matchesFilter && matchesSearch;
-        });
-        
-        // Show only limited number of products initially
-        const productsToShow = filteredProducts.slice(0, displayedProducts);
-        
-        productsToShow.forEach(product => {
-            const productCard = document.createElement('div');
-            productCard.className = 'product-card-elegant';
-            productCard.setAttribute('data-category', product.category);
-            productCard.setAttribute('data-aos', 'fade-up');
+            // Reinitialize AOS for new elements
+            AOS.refresh();
             
-            productCard.innerHTML = `
-                ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
-                <div class="product-image">
-                    <img src="${product.image}" alt="${product.name}">
-                </div>
-                <div class="product-info">
-                    <div class="product-category">${product.category.toUpperCase()}</div>
-                    <h3 class="product-name">${product.name}</h3>
-                    <p class="product-description">${product.description}</p>
-             
-                    <div class="product-actions">
-                        <button class="btn-details-elegant view-product" data-id="${product.id}">
-                            <i class="fas fa-eye"></i>
-                            <span>Dettagli</span>
-                        </button>
-                        <a href="https://wa.me/393332338660?text=Salve%20Francesca,%20vorrei%20informazioni%20su%20${encodeURIComponent(product.name)}" 
-                           class="btn-whatsapp-elegant" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            `;
-            
-            productGrid.appendChild(productCard);
-        });
-        
-        // Show/hide load more button
-        if (filteredProducts.length > displayedProducts) {
-            loadMoreBtn.style.display = 'inline-flex';
-        } else {
-            loadMoreBtn.style.display = 'none';
+            // Add event listeners to new product buttons
+            document.querySelectorAll('.view-product').forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = parseInt(this.getAttribute('data-id'));
+                    openProductModal(productId);
+                });
+            });
         }
         
-        // Reinitialize AOS for new elements
-        AOS.refresh();
+        // Initial render
+        renderProducts();
         
-        // Add event listeners to new product buttons
-        document.querySelectorAll('.view-product').forEach(button => {
-            button.addEventListener('click', function() {
-                const productId = parseInt(this.getAttribute('data-id'));
-                openProductModal(productId);
+        // ============ FILTER PRODUCTS ============
+        if (filterButtons) {
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active filter
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    currentFilter = this.getAttribute('data-filter');
+                    displayedProducts = 4; // Reset displayed products
+                    
+                    renderProducts(currentFilter, productSearch ? productSearch.value : '');
+                });
             });
-        });
-    }
-    
-    // Initial render
-    renderProducts();
-    
-    // ============ FILTER PRODUCTS ============
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Update active filter
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            currentFilter = this.getAttribute('data-filter');
-            displayedProducts = 4; // Reset displayed products
-            
-            renderProducts(currentFilter, productSearch.value);
-        });
-    });
-    
-    // ============ SEARCH PRODUCTS ============
-    productSearch.addEventListener('input', function() {
-        displayedProducts = 4; // Reset displayed products
-        renderProducts(currentFilter, this.value);
-    });
-    
-    // ============ LOAD MORE PRODUCTS ============
-    loadMoreBtn.addEventListener('click', function() {
-        displayedProducts += 4;
-        renderProducts(currentFilter, productSearch.value);
+        }
         
-        // Smooth scroll to new products
-        setTimeout(() => {
-            productGrid.scrollIntoView({
-                behavior: 'smooth',
-                block: 'end'
+        // ============ SEARCH PRODUCTS ============
+        if (productSearch) {
+            productSearch.addEventListener('input', function() {
+                displayedProducts = 4; // Reset displayed products
+                renderProducts(currentFilter, this.value);
             });
-        }, 300);
-    });
-    
-    // ============ PRODUCT MODAL PREMIUM ============
-    const productModal = new bootstrap.Modal(document.getElementById('productModal'));
-    
-    function openProductModal(productId) {
-        const product = products.find(p => p.id === productId);
-        if (!product) return;
+        }
         
-        // Set modal content
-        document.getElementById('modalProductName').textContent = product.name;
-        document.getElementById('modalProductImage').src = product.image;
-        document.getElementById('modalProductImage').alt = product.name;
-        document.getElementById('modalProductBadge').textContent = product.badge;
-        document.getElementById('modalProductCategory').textContent = product.category.toUpperCase();
-        document.getElementById('modalProductPrice').textContent = product.price;
-        document.getElementById('modalProductDescription').textContent = product.description;
+        // ============ LOAD MORE PRODUCTS ============
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', function() {
+                displayedProducts += 4;
+                renderProducts(currentFilter, productSearch ? productSearch.value : '');
+                
+                // Smooth scroll to new products
+                setTimeout(() => {
+                    if (productGrid) {
+                        productGrid.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'end'
+                        });
+                    }
+                }, 300);
+            });
+        }
         
-        // Set ingredients
-        const ingredientsTags = document.getElementById('modalProductIngredients');
-        ingredientsTags.innerHTML = '';
-        product.ingredients.forEach(ingredient => {
-            const span = document.createElement('span');
-            span.textContent = ingredient;
-            ingredientsTags.appendChild(span);
-        });
+        // ============ PRODUCT MODAL PREMIUM ============
+        const productModalElement = document.getElementById('productModal');
+        let productModal = null;
         
-        // Set benefits
-        const benefitsList = document.getElementById('modalProductBenefits');
-        benefitsList.innerHTML = '';
-        product.benefits.forEach(benefit => {
-            const span = document.createElement('span');
-            span.innerHTML = `<i class="fas fa-check"></i> ${benefit}`;
-            benefitsList.appendChild(span);
-        });
+        if (productModalElement) {
+            productModal = new bootstrap.Modal(productModalElement);
+        }
         
-        // Update WhatsApp link
-        const whatsappLink = document.getElementById('whatsappLink');
-        const message = `Salve Francesca, vorrei informazioni su ${product.name} (${product.price}) - lafranciyr.github.io`;
-        whatsappLink.href = `https://wa.me/393332338660?text=${encodeURIComponent(message)}`;
+        function openProductModal(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product || !productModal) return;
+            
+            // Set modal content
+            const modalProductName = document.getElementById('modalProductName');
+            const modalProductImage = document.getElementById('modalProductImage');
+            const modalProductBadge = document.getElementById('modalProductBadge');
+            const modalProductCategory = document.getElementById('modalProductCategory');
+            const modalProductPrice = document.getElementById('modalProductPrice');
+            const modalProductDescription = document.getElementById('modalProductDescription');
+            const modalProductIngredients = document.getElementById('modalProductIngredients');
+            const modalProductBenefits = document.getElementById('modalProductBenefits');
+            const whatsappLink = document.getElementById('whatsappLink');
+            
+            if (modalProductName) modalProductName.textContent = product.name;
+            if (modalProductImage) {
+                modalProductImage.src = product.image;
+                modalProductImage.alt = product.name;
+            }
+            if (modalProductBadge) modalProductBadge.textContent = product.badge || '';
+            if (modalProductCategory) modalProductCategory.textContent = product.category.toUpperCase();
+            if (modalProductPrice) modalProductPrice.textContent = product.price || '';
+            if (modalProductDescription) modalProductDescription.textContent = product.description;
+            
+            // Set ingredients
+            if (modalProductIngredients) {
+                modalProductIngredients.innerHTML = '';
+                if (product.ingredients && product.ingredients.length > 0) {
+                    product.ingredients.forEach(ingredient => {
+                        const span = document.createElement('span');
+                        span.textContent = ingredient;
+                        modalProductIngredients.appendChild(span);
+                    });
+                }
+            }
+            
+            // Set benefits
+            if (modalProductBenefits) {
+                modalProductBenefits.innerHTML = '';
+                if (product.benefits && product.benefits.length > 0) {
+                    product.benefits.forEach(benefit => {
+                        const span = document.createElement('span');
+                        span.innerHTML = `<i class="fas fa-check"></i> ${benefit}`;
+                        modalProductBenefits.appendChild(span);
+                    });
+                }
+            }
+            
+            // Update WhatsApp link
+            if (whatsappLink) {
+                const message = `Salve Francesca, vorrei informazioni su ${product.name}${product.price ? ' (' + product.price + ')' : ''} - lafranciyr.github.io`;
+                whatsappLink.href = `https://wa.me/393332338660?text=${encodeURIComponent(message)}`;
+            }
+            
+            // Show modal with animation
+            productModal.show();
+        }
         
-        // Show modal with animation
-        productModal.show();
-    }
-    
-    // ============ GSAP ANIMATIONS PREMIUM ============
-    gsap.registerPlugin(ScrollTrigger);
-    
-    // Hero title animation
-    gsap.from('.hero-title span', {
-        duration: 1.2,
-        y: 60,
-        opacity: 0,
-        stagger: 0.2,
-        ease: "power3.out"
-    });
-    
-    // Hero image animation
-    gsap.from('.hero-image', {
-        duration: 1.5,
-        scale: 1.1,
-        opacity: 0,
-        ease: "power3.out"
-    });
-    
-    // Floating elements animation
-    gsap.to('.floating-botanical', {
-        y: 30,
-        duration: 3,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut"
-    });
-    
-    // Parallax effect for sections
-    gsap.utils.toArray('section').forEach(section => {
-        const bg = section.querySelector('.bg-texture, .philosophy-background, .contact-background');
-        if (bg) {
-            gsap.to(bg, {
-                y: (i, target) => -ScrollTrigger.maxScroll(window) * 0.1,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top top",
-                    end: "bottom top",
-                    scrub: true
+        // ============ GSAP ANIMATIONS PREMIUM ============
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // Hero title animation
+            const heroTitle = document.querySelector('.hero-title span');
+            if (heroTitle) {
+                gsap.from('.hero-title span', {
+                    duration: 1.2,
+                    y: 60,
+                    opacity: 0,
+                    stagger: 0.2,
+                    ease: "power3.out"
+                });
+            }
+            
+            // Hero image animation
+            const heroImage = document.querySelector('.hero-image');
+            if (heroImage) {
+                gsap.from('.hero-image', {
+                    duration: 1.5,
+                    scale: 1.1,
+                    opacity: 0,
+                    ease: "power3.out"
+                });
+            }
+            
+            // Floating elements animation
+            const floatingElements = document.querySelector('.floating-botanical');
+            if (floatingElements) {
+                gsap.to('.floating-botanical', {
+                    y: 30,
+                    duration: 3,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut"
+                });
+            }
+            
+            // Parallax effect for sections
+            gsap.utils.toArray('section').forEach(section => {
+                const bg = section.querySelector('.bg-texture, .philosophy-background, .contact-background');
+                if (bg) {
+                    gsap.to(bg, {
+                        y: (i, target) => -ScrollTrigger.maxScroll(window) * 0.1,
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: section,
+                            start: "top top",
+                            end: "bottom top",
+                            scrub: true
+                        }
+                    });
                 }
             });
+            
+            // Animate cards on scroll
+            const cards = document.querySelectorAll('.philosophy-card, .product-card-elegant');
+            if (cards.length > 0) {
+                gsap.utils.toArray('.philosophy-card, .product-card-elegant').forEach(card => {
+                    gsap.from(card, {
+                        scrollTrigger: {
+                            trigger: card,
+                            start: 'top 80%',
+                            end: 'bottom 20%',
+                            toggleActions: 'play none none reverse'
+                        },
+                        y: 50,
+                        opacity: 0,
+                        duration: 0.8,
+                        ease: "power3.out"
+                    });
+                });
+            }
         }
-    });
-    
-    // Animate cards on scroll
-    gsap.utils.toArray('.philosophy-card, .product-card-elegant').forEach(card => {
-        gsap.from(card, {
-            scrollTrigger: {
-                trigger: card,
-                start: 'top 80%',
-                end: 'bottom 20%',
-                toggleActions: 'play none none reverse'
-            },
-            y: 50,
-            opacity: 0,
-            duration: 0.8,
-            ease: "power3.out"
-        });
-    });
-    
-    // ============ INTERACTIVE MAP ============
-    const mapOverlay = document.querySelector('.map-overlay');
-    if (mapOverlay) {
-        mapOverlay.addEventListener('click', function() {
-            gsap.to(this, {
-                opacity: 0,
-                duration: 0.5,
-                onComplete: () => {
+        
+        // ============ INTERACTIVE MAP ============
+        const mapOverlay = document.querySelector('.map-overlay');
+        if (mapOverlay) {
+            mapOverlay.addEventListener('click', function() {
+                if (typeof gsap !== 'undefined') {
+                    gsap.to(this, {
+                        opacity: 0,
+                        duration: 0.5,
+                        onComplete: () => {
+                            this.style.display = 'none';
+                        }
+                    });
+                } else {
                     this.style.display = 'none';
                 }
             });
-        });
-    }
-    
-    // ============ FORM VALIDATION (placeholder) ============
-    // Can be extended for contact form if added
-    
-    // ============ RESPONSIVE ADJUSTMENTS ============
-    function handleResize() {
-        // Adjust grid columns based on screen size
-        const productGridElement = document.getElementById('productGrid');
-        if (window.innerWidth < 768) {
-            productGridElement.style.gridTemplateColumns = '1fr';
-        } else if (window.innerWidth < 1200) {
-            productGridElement.style.gridTemplateColumns = 'repeat(auto-fill, minmax(280px, 1fr))';
-        } else {
-            productGridElement.style.gridTemplateColumns = 'repeat(auto-fill, minmax(300px, 1fr))';
         }
-    }
-    
-    window.addEventListener('resize', handleResize);
-    handleResize(); // Initial call
-    
-    // ============ LAZY LOADING FOR IMAGES ============
-    const lazyImages = document.querySelectorAll('img');
-    
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.add('loaded');
-                observer.unobserve(img);
-            }
-        });
-    });
-    
-    lazyImages.forEach(img => {
-        if (img.dataset.src) {
-            imageObserver.observe(img);
-        }
-    });
-    
-    // ============ SMOOTH SCROLL FOR NAVIGATION ============
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                // Close mobile menu if open
-                const navbarCollapse = document.querySelector('.navbar-collapse');
-                if (navbarCollapse.classList.contains('show')) {
-                    const navbarToggler = document.querySelector('.navbar-toggler');
-                    navbarToggler.click();
-                }
-                
-                // Smooth scroll
-                window.scrollTo({
-                    top: targetElement.offsetTop - 100,
-                    behavior: 'smooth'
-                });
-                
-                // Update active link
-                navLinks.forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
-            }
-        });
-    });
-    
-    // Update active link on scroll
-    window.addEventListener('scroll', () => {
-        let current = '';
-        const sections = document.querySelectorAll('section[id]');
         
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= sectionTop - 150) {
-                current = section.getAttribute('id');a
+        // ============ RESPONSIVE ADJUSTMENTS ============
+        function handleResize() {
+            // Adjust grid columns based on screen size
+            if (productGrid) {
+                if (window.innerWidth < 768) {
+                    productGrid.style.gridTemplateColumns = '1fr';
+                } else if (window.innerWidth < 1200) {
+                    productGrid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(280px, 1fr))';
+                } else {
+                    productGrid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(300px, 1fr))';
+                }
             }
-        });
+        }
+        
+        window.addEventListener('resize', handleResize);
+        if (productGrid) handleResize(); // Initial call
+        
+        // ============ LAZY LOADING FOR IMAGES ============
+        const lazyImages = document.querySelectorAll('img[data-src]');
+        
+        if ('IntersectionObserver' in window && lazyImages.length > 0) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.add('loaded');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            lazyImages.forEach(img => {
+                if (img.dataset.src) {
+                    imageObserver.observe(img);
+                }
+            });
+        }
+        
+        // ============ SMOOTH SCROLL FOR NAVIGATION ============
+        const navLinks = document.querySelectorAll('.nav-link');
         
         navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                        const navbarToggler = document.querySelector('.navbar-toggler');
+                        if (navbarToggler) navbarToggler.click();
+                    }
+                    
+                    // Smooth scroll
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active link
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
         });
+        
+        // Update active link on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section[id]');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        console.log('Sito Premium "la francy" Yves Rocher inizializzato con successo!');
     });
-    
-    console.log('Sito Premium "la francy" Yves Rocher inizializzato con successo!');
-});
-    </script>
+</script>
 </body>
 </html>
+
 
 
 
