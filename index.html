@@ -3,2729 +3,405 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>la francy | Promoter Yves Rocher - Cosmétique Végétale</title>
-    
-    <!-- Meta Tags Premium per SEO -->
-    <meta name="description" content="Promoter ufficiale Yves Rocher. Scopri la bellezza vegetale francese con consulenza personalizzata, prodotti naturali e sostenibilità ambientale.">
-    <meta name="keywords" content="Yves Rocher, cosmesi vegetale, bellezza naturale, prodotti bio, promoter, la francy, cosmetici francesi, sostenibilità">
-    <meta name="author" content="Francesca Sassone">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="la francy | Promoter Yves Rocher">
-    <meta property="og:description" content="Esperta in cosmesi vegetale francese. Consulenza personalizzata e prodotti naturali.">
-    <meta property="og:image" content="https://lafranciyr.github.io/images/francy-preview.jpg">
-    <meta property="og:url" content="https://lafranciyr.github.io">
-    
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome -->
+    <title>Manutenzione in Corso</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts Premium -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
     <style>
-        /* Quick inline styles for preview */
-        :root {
-            --beige-primary: #F5F1E8;
-            --beige-secondary: #E8E2D5;
-            --beige-dark: #D4C9B8;
-            --green-primary: #2A5C4B;
-            --green-secondary: #3A7A65;
-            --green-light: #4A9A7F;
-            --accent-gold: #C8A97E;
-            --text-dark: #2C2C2C;
-            --text-light: #5C5C5C;
-            --glass-white: rgba(255, 255, 255, 0.12);
-            --glass-border: rgba(255, 255, 255, 0.2);
-            --font-serif: 'Cormorant Garamond', serif;
-            --font-sans: 'Montserrat', sans-serif;
-            --font-display: 'Playfair Display', serif;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        /* style.css - Premium Version */
-:root {
-    /* Color Palette Premium */
-    --beige-primary: #F5F1E8;
-    --beige-secondary: #E8E2D5;
-    --beige-dark: #D4C9B8;
-    --green-primary: #2A5C4B;
-    --green-secondary: #3A7A65;
-    --green-light: #4A9A7F;
-    --accent-gold: #C8A97E;
-    --text-dark: #2C2C2C;
-    --text-light: #5C5C5C;
-    --text-lighter: #8C8C8C;
-    
-    /* Glass Effects */
-    --glass-white: rgba(255, 255, 255, 0.12);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-dark: rgba(42, 92, 75, 0.1);
-    --glass-shadow: 0 20px 60px rgba(42, 92, 75, 0.08);
-    
-    /* Typography */
-    --font-serif: 'Cormorant Garamond', serif;
-    --font-sans: 'Montserrat', sans-serif;
-    --font-display: 'Playfair Display', serif;
-    
-    /* Spacing */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 4rem;
-    --spacing-xl: 8rem;
-}
-
-/* Reset & Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: var(--font-sans);
-    color: var(--text-dark);
-    background-color: var(--beige-primary);
-    overflow-x: hidden;
-    font-weight: 400;
-    line-height: 1.6;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-serif);
-    font-weight: 500;
-    line-height: 1.2;
-}
-
-/* Loading Screen Minimal */
-.loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--beige-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 99999;
-    transition: opacity 0.8s ease, visibility 0.8s ease;
-}
-
-.loading-screen.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.loading-content {
-    text-align: center;
-}
-
-.loading-logo {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1.5rem;
-}
-
-.logo-circle {
-    width: 100%;
-    height: 100%;
-    border: 2px solid var(--green-primary);
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: logoSpin 3s linear infinite;
-}
-
-.logo-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: var(--font-serif);
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--green-primary);
-}
-
-.loading-subtitle {
-    font-family: var(--font-serif);
-    font-size: 1rem;
-    color: var(--text-light);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
-@keyframes logoSpin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Floating WhatsApp Button */
-.floating-whatsapp {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background: linear-gradient(135deg, #25D366, #128C7E);
-    color: white;
-    padding: 0.8rem 1.2rem;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    font-weight: 500;
-    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.floating-whatsapp:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
-}
-
-/* Elegant Navigation */
-.elegant-nav {
-    background: rgba(245, 241, 232, 0.95);
-    backdrop-filter: blur(20px);
-    padding: 1.5rem 0;
-    border-bottom: 1px solid rgba(212, 201, 184, 0.3);
-    transition: all 0.4s ease;
-}
-
-.elegant-nav.scrolled {
-    padding: 1rem 0;
-    box-shadow: 0 5px 30px rgba(42, 92, 75, 0.1);
-}
-
-.brand-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.brand-icon {
-    width: 40px;
-    height: 40px;
-    background: var(--green-primary);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-serif);
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
-.brand-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.brand-main {
-    font-family: var(--font-display);
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--green-primary);
-    line-height: 1.2;
-}
-
-.brand-subtitle {
-    font-size: 0.7rem;
-    color: var(--text-light);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-}
-
-/* Hamburger Menu Elegant */
-.elegant-toggler {
-    border: none;
-    background: transparent;
-    padding: 0.5rem;
-}
-
-.hamburger {
-    width: 24px;
-    height: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.hamburger span {
-    display: block;
-    height: 1px;
-    background-color: var(--green-primary);
-    transition: all 0.3s ease;
-}
-
-.navbar-toggler[aria-expanded="true"] .hamburger span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.navbar-toggler[aria-expanded="true"] .hamburger span:nth-child(2) {
-    opacity: 0;
-}
-
-.navbar-toggler[aria-expanded="true"] .hamburger span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Navigation Items */
-.navbar-nav {
-    gap: 2rem;
-}
-
-.nav-link {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-light) !important;
-    font-weight: 400;
-    position: relative;
-    padding: 0.5rem 0 !important;
-    transition: color 0.3s ease;
-}
-
-.nav-number {
-    font-size: 0.7rem;
-    color: var(--accent-gold);
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-text {
-    font-size: 0.9rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: var(--green-primary);
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover,
-.nav-link.active {
-    color: var(--green-primary) !important;
-}
-
-.nav-link:hover .nav-number,
-.nav-link.active .nav-number {
-    color: var(--green-primary);
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-    width: 100%;
-}
-
-/* Hero Section */
-.hero-section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    padding-top: 6rem;
-}
-
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.bg-texture {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%232a5c4b' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
-    opacity: 0.3;
-}
-
-.floating-botanical {
-    position: absolute;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50,20 C60,10 80,15 80,30 C80,45 60,50 50,40 C40,50 20,45 20,30 C20,15 40,10 50,20 Z' fill='none' stroke='%232a5c4b' stroke-width='1' stroke-opacity='0.05'/%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.1;
-}
-
-.botanical-1 {
-    width: 300px;
-    height: 300px;
-    top: 10%;
-    right: 5%;
-    animation: floatBotanical 25s infinite ease-in-out;
-}
-
-.botanical-2 {
-    width: 200px;
-    height: 200px;
-    bottom: 20%;
-    left: 5%;
-    animation: floatBotanical 30s infinite ease-in-out reverse;
-}
-
-@keyframes floatBotanical {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-30px) rotate(5deg); }
-}
-
-.hero-content {
-    padding-right: 2rem;
-}
-
-.hero-subtitle {
-    font-family: var(--font-sans);
-    font-size: 0.8rem;
-    color: var(--accent-gold);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-}
-
-.hero-title {
-    font-family: var(--font-display);
-    font-size: 4rem;
-    font-weight: 400;
-    color: var(--green-primary);
-    margin-bottom: 1.5rem;
-    line-height: 1.1;
-}
-
-.title-line-1 {
-    display: block;
-    font-weight: 300;
-    font-style: italic;
-}
-
-.title-line-2 {
-    display: block;
-    font-weight: 500;
-}
-
-.hero-divider {
-    width: 100px;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent-gold), transparent);
-    margin: 2rem 0;
-}
-
-.hero-description {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    max-width: 500px;
-    margin-bottom: 3rem;
-    font-weight: 300;
-}
-
-.hero-description strong {
-    color: var(--green-primary);
-    font-weight: 500;
-}
-
-/* Elegant Buttons */
-.btn-elegant {
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 2rem;
-    background: var(--green-primary);
-    color: white;
-    border: none;
-    border-radius: 0;
-    font-family: var(--font-sans);
-    font-weight: 500;
-    text-decoration: none;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.9rem;
-}
-
-.btn-elegant:hover {
-    background: var(--green-secondary);
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(42, 92, 75, 0.2);
-}
-
-.btn-line {
-    width: 40px;
-    height: 1px;
-    background: white;
-    transition: width 0.3s ease;
-}
-
-.btn-elegant:hover .btn-line {
-    width: 60px;
-}
-
-.btn-text {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--green-primary);
-    text-decoration: none;
-    font-weight: 500;
-    padding: 1rem 0;
-    transition: all 0.3s ease;
-}
-
-.btn-text:hover {
-    gap: 1rem;
-    color: var(--green-secondary);
-}
-
-.hero-cta {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-/* Hero Image */
-.hero-image-container {
-    position: relative;
-}
-
-.image-frame-elegant {
-    position: relative;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.hero-image {
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-    object-position: center;
-    filter: grayscale(10%);
-    transition: transform 1s ease;
-}
-
-.image-frame-elegant:hover .hero-image {
-    transform: scale(1.05);
-}
-
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, rgba(245, 241, 232, 0.1), transparent);
-    pointer-events: none;
-}
-
-.hero-badge {
-    position: absolute;
-    bottom: 2rem;
-    left: -1rem;
-    background: var(--glass-white);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-    padding: 1rem 1.5rem;
-    border-radius: 2px;
-}
-
-.badge-content {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.badge-icon {
-    width: 30px;
-    height: 30px;
-    background: var(--green-primary);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-}
-
-.badge-text {
-    font-size: 0.8rem;
-    color: var(--green-primary);
-    font-weight: 500;
-    white-space: nowrap;
-}
-
-/* Scroll Indicator */
-.scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.mouse {
-    width: 24px;
-    height: 40px;
-    border: 1px solid var(--green-primary);
-    border-radius: 12px;
-    position: relative;
-}
-
-.wheel {
-    width: 2px;
-    height: 8px;
-    background-color: var(--green-primary);
-    border-radius: 1px;
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: scrollWheel 2s infinite;
-}
-
-@keyframes scrollWheel {
-    0% { opacity: 1; top: 8px; }
-    100% { opacity: 0; top: 24px; }
-}
-
-/* Section Common Styles */
-section {
-    padding: 6rem 0;
-    position: relative;
-}
-
-.section-label {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.section-label.center {
-    justify-content: center;
-}
-
-.label-number {
-    font-family: var(--font-serif);
-    font-size: 1rem;
-    color: var(--accent-gold);
-    font-weight: 500;
-}
-
-.label-text {
-    font-size: 0.8rem;
-    color: var(--text-light);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-}
-
-.section-title {
-    font-family: var(--font-display);
-    font-size: 3rem;
-    font-weight: 400;
-    color: var(--green-primary);
-    margin-bottom: 1rem;
-}
-
-.section-title .highlight {
-    color: var(--accent-gold);
-    font-weight: 500;
-}
-
-.section-subtitle {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    font-weight: 300;
-    margin-bottom: 3rem;
-}
-
-/* About Section */
-.about-image-wrapper {
-    padding-right: 2rem;
-}
-
-.about-image-container {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-}
-
-.about-image {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    object-position: center;
-    filter: grayscale(20%);
-}
-
-.image-decoration {
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: 20px;
-    bottom: 20px;
-    border: 1px solid var(--accent-gold);
-    z-index: -1;
-}
-
-.about-content {
-    padding-left: 2rem;
-}
-
-.expertise-list {
-    margin-top: 3rem;
-}
-
-.expertise-item {
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    align-items: flex-start;
-}
-
-.expertise-icon {
-    width: 50px;
-    height: 50px;
-    background: var(--glass-white);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--green-primary);
-    font-size: 1.2rem;
-    flex-shrink: 0;
-}
-
-.expertise-content h4 {
-    font-size: 1.2rem;
-    color: var(--green-primary);
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-.expertise-content p {
-    color: var(--text-light);
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-/* Philosophy Section */
-.philosophy-section {
-    background: var(--beige-secondary);
-    position: relative;
-    overflow: hidden;
-}
-
-.philosophy-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 100C10 50 50 10 100 10C150 10 190 50 190 100C190 150 150 190 100 190C50 190 10 150 10 100Z' fill='none' stroke='%232a5c4b' stroke-width='1' stroke-opacity='0.03'/%3E%3C/svg%3E");
-    background-size: 400px;
-    opacity: 0.5;
-}
-
-.philosophy-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin: 4rem 0;
-}
-
-.philosophy-card {
-    background: var(--glass-white);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-    padding: 2.5rem 2rem;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.philosophy-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--glass-shadow);
-}
-
-.card-icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, var(--green-primary), var(--green-secondary));
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    margin: 0 auto 1.5rem;
-}
-
-.philosophy-card h3 {
-    font-size: 1.3rem;
-    color: var(--green-primary);
-    margin-bottom: 1rem;
-    font-weight: 500;
-}
-
-.philosophy-card p {
-    color: var(--text-light);
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.philosophy-cta {
-    text-align: center;
-    margin-top: 4rem;
-}
-
-.philosophy-cta p {
-    font-size: 1.2rem;
-    color: var(--text-dark);
-    margin-bottom: 2rem;
-    font-weight: 300;
-}
-
-.philosophy-cta p strong {
-    color: var(--green-primary);
-    font-weight: 500;
-}
-
-/* Products Section */
-.products-section {
-    background: var(--beige-primary);
-}
-
-/* Search Elegant */
-.search-container {
-    max-width: 800px;
-    margin: 0 auto 4rem;
-}
-
-.search-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    background: var(--glass-white);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-    padding: 1rem 1.5rem;
-    margin-bottom: 1.5rem;
-    transition: all 0.3s ease;
-}
-
-.search-wrapper:focus-within {
-    box-shadow: 0 15px 40px rgba(42, 92, 75, 0.1);
-    transform: translateY(-5px);
-}
-
-.search-icon {
-    color: var(--accent-gold);
-    font-size: 1rem;
-    margin-right: 1rem;
-}
-
-#productSearch {
-    border: none;
-    background: transparent;
-    flex-grow: 1;
-    color: var(--text-dark);
-    font-size: 1rem;
-    padding: 0;
-}
-
-#productSearch:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-.search-divider {
-    width: 1px;
-    height: 24px;
-    background: var(--glass-border);
-    margin: 0 1rem;
-}
-
-.search-btn {
-    background: transparent;
-    border: none;
-    color: var(--green-primary);
-    font-size: 1rem;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.search-btn:hover {
-    transform: translateX(5px);
-}
-
-.filter-tags {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.tag-btn {
-    padding: 0.5rem 1.5rem;
-    background: transparent;
-    border: 1px solid var(--glass-border);
-    color: var(--text-light);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.tag-btn:hover,
-.tag-btn.active {
-    background: var(--green-primary);
-    color: white;
-    border-color: var(--green-primary);
-}
-
-/* Product Grid Premium */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
-}
-
-.product-card-elegant {
-    background: var(--glass-white);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-    overflow: hidden;
-    transition: all 0.4s ease;
-    position: relative;
-}
-
-.product-card-elegant:hover {
-    transform: translateY(-15px);
-    box-shadow: var(--glass-shadow);
-}
-
-.product-card-elegant:hover .product-image img {
-    transform: scale(1.1);
-}
-
-.product-image {
-    height: 250px;
-    overflow: hidden;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-}
-
-.product-badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: var(--green-primary);
-    color: white;
-    padding: 0.25rem 0.75rem;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.product-info {
-    padding: 1.5rem;
-}
-
-.product-category {
-    font-size: 0.7rem;
-    color: var(--accent-gold);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.5rem;
-}
-
-.product-name {
-    font-size: 1.2rem;
-    color: var(--green-primary);
-    margin-bottom: 0.75rem;
-    font-weight: 500;
-}
-
-.product-description {
-    font-size: 0.9rem;
-    color: var(--text-light);
-    margin-bottom: 1rem;
-    line-height: 1.5;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.product-price {
-    font-size: 1.3rem;
-    color: var(--green-primary);
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-}
-
-.product-actions {
-    display: flex;
-    gap: 1rem;
-}
-
-.btn-details-elegant {
-    flex-grow: 1;
-    padding: 0.75rem;
-    background: transparent;
-    border: 1px solid var(--glass-border);
-    color: var(--green-primary);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.8rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-.btn-details-elegant:hover {
-    background: var(--green-primary);
-    color: white;
-    border-color: var(--green-primary);
-}
-
-.btn-whatsapp-elegant {
-    width: 44px;
-    height: 44px;
-    background: #25D366;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-}
-
-.btn-whatsapp-elegant:hover {
-    background: #128C7E;
-    transform: scale(1.1);
-}
-
-/* Elegant Outline Button */
-.btn-elegant-outline {
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 2rem;
-    background: transparent;
-    color: var(--green-primary);
-    border: 1px solid var(--green-primary);
-    font-family: var(--font-sans);
-    font-weight: 500;
-    text-decoration: none;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.9rem;
-}
-
-.btn-elegant-outline:hover {
-    background: var(--green-primary);
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(42, 92, 75, 0.2);
-}
-
-/* Elegant Modal */
-.elegant-modal {
-    background: var(--beige-primary);
-    border: 1px solid var(--glass-border);
-    border-radius: 0;
-    box-shadow: 0 30px 80px rgba(42, 92, 75, 0.2);
-}
-
-.btn-close-elegant {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    background: transparent;
-    border: none;
-    color: var(--text-light);
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    z-index: 10;
-}
-
-.btn-close-elegant:hover {
-    color: var(--green-primary);
-}
-
-.modal-product-image {
-    position: relative;
-    height: 400px;
-    overflow: hidden;
-}
-
-#modalProductImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.modal-product-details {
-    padding: 2rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-#modalProductName {
-    font-size: 1.8rem;
-    color: var(--green-primary);
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-#modalProductPrice {
-    font-size: 1.5rem;
-    color: var(--accent-gold);
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-}
-
-.modal-product-details .product-description {
-    font-size: 1rem;
-    color: var(--text-light);
-    margin-bottom: 2rem;
-    line-height: 1.6;
-}
-
-.ingredients-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-}
-
-.ingredients-tags span {
-    background: var(--glass-white);
-    border: 1px solid var(--glass-border);
-    padding: 0.25rem 0.75rem;
-    font-size: 0.8rem;
-    color: var(--text-light);
-}
-
-.benefits-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-}
-
-.benefits-list span {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 0.9rem;
-    color: var(--text-dark);
-}
-
-.benefits-list span i {
-    color: var(--green-primary);
-    font-size: 0.8rem;
-}
-
-.modal-actions {
-    margin-top: auto;
-}
-
-.modal-whatsapp {
-    width: 100%;
-    justify-content: center;
-    background: #25D366;
-    border-color: #25D366;
-}
-
-.modal-whatsapp:hover {
-    background: #128C7E;
-    border-color: #128C7E;
-}
-
-.product-note {
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--glass-border);
-    font-size: 0.8rem;
-    color: var(--text-light);
-}
-
-.product-note i {
-    color: var(--green-primary);
-    margin-right: 0.5rem;
-}
-
-/* Contact Section */
-.contact-section {
-    position: relative;
-    overflow: hidden;
-}
-
-.contact-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.bg-pattern {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%232a5c4b' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
-    opacity: 0.3;
-}
-
-.contact-wrapper {
-    background: var(--glass-white);
-    backdrop-filter: blur(30px);
-    border: 1px solid var(--glass-border);
-    padding: 4rem;
-    box-shadow: var(--glass-shadow);
-}
-
-.contact-details {
-    margin: 3rem 0;
-}
-
-.contact-item {
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    align-items: flex-start;
-}
-
-.contact-icon {
-    width: 50px;
-    height: 50px;
-    background: var(--glass-white);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--green-primary);
-    font-size: 1.2rem;
-    flex-shrink: 0;
-}
-
-.contact-content h4 {
-    font-size: 1rem;
-    color: var(--green-primary);
-    margin-bottom: 0.25rem;
-    font-weight: 500;
-}
-
-.contact-content a,
-.contact-content p {
-    color: var(--text-light);
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
-}
-
-.contact-content a:hover {
-    color: var(--green-primary);
-}
-
-.contact-content .small {
-    font-size: 0.8rem;
-    color: var(--text-lighter);
-    margin-top: 0.25rem;
-}
-
-.contact-social {
-    margin-top: 3rem;
-}
-
-.contact-social p {
-    color: var(--text-light);
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.social-link {
-    width: 40px;
-    height: 40px;
-    background: var(--glass-white);
-    border: 1px solid var(--glass-border);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--green-primary);
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.social-link:hover {
-    background: var(--green-primary);
-    color: white;
-    transform: translateY(-3px);
-}
-
-.contact-map {
-    height: 100%;
-}
-
-.map-container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.map-container h4 {
-    font-size: 1.3rem;
-    color: var(--green-primary);
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-.map-container p {
-    color: var(--text-light);
-    margin-bottom: 2rem;
-    font-size: 0.95rem;
-}
-
-.map-wrapper {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.map-wrapper iframe {
-    flex-grow: 1;
-    border: 1px solid var(--glass-border);
-}
-
-.map-actions {
-    margin-top: 2rem;
-}
-
-/* Footer Elegant */
-.elegant-footer {
-    background: var(--green-primary);
-    color: white;
-    padding: 3rem 0 2rem;
-}
-
-.footer-content {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-}
-
-.footer-brand {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.footer-brand .brand-icon {
-    background: white;
-    color: var(--green-primary);
-}
-
-.footer-brand .brand-main {
-    color: white;
-}
-
-.footer-brand .brand-subtitle {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.footer-quote p {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 0.5rem;
-}
-
-.quote-author {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-links {
-    display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
-    align-items: center;
-}
-
-.footer-links a {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    font-size: 0.8rem;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: white;
-}
-
-.divider {
-    color: rgba(255, 255, 255, 0.3);
-}
-
-.footer-bottom {
-    text-align: center;
-}
-
-.copyright {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 1rem;
-}
-
-.disclaimer {
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.5);
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.4;
-}
-
-/* Responsive Design Premium */
-@media (max-width: 1200px) {
-    .hero-title {
-        font-size: 3.5rem;
-    }
-    
-    .section-title {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 992px) {
-    .hero-section {
-        padding-top: 8rem;
-    }
-    
-    .hero-content {
-        padding-right: 0;
-        margin-bottom: 4rem;
-        text-align: center;
-    }
-    
-    .hero-divider {
-        margin: 2rem auto;
-    }
-    
-    .hero-description {
-        margin: 0 auto 3rem;
-    }
-    
-    .hero-cta {
-        justify-content: center;
-    }
-    
-    .about-content {
-        padding-left: 0;
-        margin-top: 3rem;
-    }
-    
-    .contact-wrapper {
-        padding: 3rem 2rem;
-    }
-    
-    .footer-links {
-        justify-content: center;
-        margin-top: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.8rem;
-    }
-    
-    .section-title {
-        font-size: 2.2rem;
-    }
-    
-    .hero-image {
-        height: 450px;
-    }
-    
-    .about-image {
-        height: 400px;
-    }
-    
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .philosophy-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-wrapper {
-        padding: 2rem 1.5rem;
-    }
-    
-    .footer-quote {
-        margin: 2rem 0;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero-title {
-        font-size: 2.2rem;
-    }
-    
-    .section-title {
-        font-size: 1.8rem;
-    }
-    
-    .hero-description {
-        font-size: 1rem;
-    }
-    
-    .hero-cta {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-    
-    .btn-elegant,
-    .btn-text {
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .about-image-container {
-        max-width: 100%;
-    }
-    
-    .expertise-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .contact-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-}
-
-/* AOS Custom Animation */
-[data-aos] {
-    pointer-events: none;
-}
-
-[data-aos].aos-animate {
-    pointer-events: auto;
-}
-
-/* Scrollbar Styling */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--beige-secondary);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--green-primary);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--green-secondary);
-}
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #3a7bd5, #00d2ff);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .maintenance-container {
+            max-width: 800px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .maintenance-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: -1;
+            animation: moveBackground 20s linear infinite;
+        }
+        
+        @keyframes moveBackground {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(-20px, -20px) rotate(360deg); }
+        }
+        
+        .maintenance-header {
+            margin-bottom: 30px;
+        }
+        
+        .maintenance-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            color: #ffcc00;
+            animation: spin 4s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            color: #ddd;
+            margin-bottom: 10px;
+        }
+        
+        .message {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: #ccc;
+        }
+        
+        .progress-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            height: 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            width: 65%;
+            background: linear-gradient(to right, #ffcc00, #ff9900);
+            border-radius: 10px;
+            position: relative;
+            animation: progressAnimation 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes progressAnimation {
+            0% { width: 65%; }
+            100% { width: 70%; }
+        }
+        
+        .progress-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .details {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .details h3 {
+            margin-bottom: 15px;
+            color: #ffcc00;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .details ul {
+            list-style-type: none;
+            padding-left: 10px;
+        }
+        
+        .details li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .details li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            min-width: 80px;
+        }
+        
+        .countdown-value {
+            font-size: 2.2rem;
+            font-weight: bold;
+            display: block;
+            color: #ffcc00;
+        }
+        
+        .countdown-label {
+            font-size: 0.9rem;
+            color: #ccc;
+            text-transform: uppercase;
+        }
+        
+        .contact-info {
+            font-size: 1rem;
+            color: #aaa;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: #ffcc00;
+            transform: translateY(-5px);
+        }
+        
+        .floating-tools {
+            position: absolute;
+            font-size: 24px;
+            opacity: 0.7;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .tool-1 { top: 20px; left: 30px; animation-delay: 0s; }
+        .tool-2 { top: 40px; right: 50px; animation-delay: 1s; }
+        .tool-3 { bottom: 60px; left: 40px; animation-delay: 2s; }
+        .tool-4 { bottom: 30px; right: 60px; animation-delay: 3s; }
+        
+        @media (max-width: 768px) {
+            .maintenance-container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .countdown-item {
+                min-width: 70px;
+                padding: 10px;
+            }
+            
+            .countdown-value {
+                font-size: 1.8rem;
+            }
+            
+            .floating-tools {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Minimal Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-content">
-            <div class="loading-logo">
-                <div class="logo-circle"></div>
-                <div class="logo-text">YR</div>
+    <div class="maintenance-container">
+        <!-- Icone decorative fluttuanti -->
+        <div class="floating-tools tool-1">
+            <i class="fas fa-tools"></i>
+        </div>
+        <div class="floating-tools tool-2">
+            <i class="fas fa-cog"></i>
+        </div>
+        <div class="floating-tools tool-3">
+            <i class="fas fa-screwdriver"></i>
+        </div>
+        <div class="floating-tools tool-4">
+            <i class="fas fa-wrench"></i>
+        </div>
+        
+        <div class="maintenance-header">
+            <div class="maintenance-icon">
+                <i class="fas fa-cogs"></i>
             </div>
-            <div class="loading-subtitle">Cosmétique Végétale</div>
+            <h1>MANUTENZIONE IN CORSO</h1>
+            <p class="subtitle">Stiamo lavorando per migliorare la tua esperienza</p>
+        </div>
+        
+        <p class="message">
+            Ci scusiamo per l'inconveniente. Il nostro sito è attualmente in manutenzione per aggiornamenti importanti.
+            Stiamo lavorando per tornare online il prima possibile con nuove funzionalità e miglioramenti.
+        </p>
+        
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+            <div class="progress-text">65% Completato</div>
+        </div>
+        
+        <div class="details">
+            <h3><i class="fas fa-tasks"></i> Cosa stiamo facendo:</h3>
+            <ul>
+                <li>Aggiornamento del sistema di sicurezza</li>
+                <li>Miglioramento delle prestazioni del server</li>
+                <li>Aggiunta di nuove funzionalità</li>
+                <li>Ottimizzazione per dispositivi mobili</li>
+                <li>Risoluzione di problemi tecnici</li>
+            </ul>
+        </div>
+        
+        <div class="countdown">
+            <div class="countdown-item">
+                <span class="countdown-value" id="days">00</span>
+                <span class="countdown-label">Giorni</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-value" id="hours">00</span>
+                <span class="countdown-label">Ore</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-value" id="minutes">00</span>
+                <span class="countdown-label">Minuti</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-value" id="seconds">00</span>
+                <span class="countdown-label">Secondi</span>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <p>Per urgenze, contattaci a: <strong>supporto@sitoweb.com</strong> o al numero <strong>+39 123 456 7890</strong></p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
         </div>
     </div>
 
-    <!-- Floating Contact Button -->
-    <a href="https://wa.me/393332338660" class="floating-whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-        <span>Scrivimi</span>
-    </a>
-
-    <!-- Navigation Bar Elegante -->
-    <nav class="navbar navbar-expand-lg fixed-top elegant-nav" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="#home">
-                <div class="brand-wrapper">
-                    <div class="brand-icon">YR</div>
-                    <div class="brand-text">
-                        <span class="brand-main">la francy</span>
-                        <span class="brand-subtitle">Promoter Yves Rocher</span>
-                    </div>
-                </div>
-            </a>
-            
-            <button class="navbar-toggler elegant-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">
-                            <span class="nav-number">01</span>
-                            <span class="nav-text">Home</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">
-                            <span class="nav-number">02</span>
-                            <span class="nav-text">Chi Sono</span>
-                        </a>
-                    </li>
-                  
-                    <li class="nav-item">
-                        <a class="nav-link" href="#products">
-                            <span class="nav-number">04</span>
-                            <span class="nav-text">Prodotti</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">
-                            <span class="nav-number">05</span>
-                            <span class="nav-text">Contatti</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section Minimalista -->
-        <section id="home" class="hero-section">
-            <div class="hero-background">
-                <div class="bg-texture"></div>
-                <div class="floating-botanical botanical-1"></div>
-                <div class="floating-botanical botanical-2"></div>
-            </div>
-            
-            <div class="container">
-                <div class="row align-items-center min-vh-100">
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1200">
-                        <div class="hero-content">
-                            <div class="hero-subtitle">Promoter Ufficiale</div>
-                            <h1 class="hero-title">
-                                <span class="title-line-1">la francy</span>
-                                <span class="title-line-2">Yves Rocher</span>
-                            </h1>
-                            <div class="hero-divider"></div>
-                            <p class="hero-description">Esperta in <strong>cosmétique végétale</strong>. Ti guido alla scoperta della bellezza naturale francese, con prodotti formulati da oltre 60 anni di ricerca botanica.</p>
-                            
-                            <div class="hero-cta">
-                                <a href="#products" class="btn-elegant">
-                                    <span>Scopri i Prodotti</span>
-                                    <div class="btn-line"></div>
-                                </a>
-                                <a href="#about" class="btn-text">
-                                    <span>La Mia Storia</span>
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
-                        <div class="hero-image-container">
-                            <div class="image-frame-elegant">
-                                <img src="WhatsApp Image 2025-12-17 at 14.04.58.jpeg" alt="Francesca Sassone - la francy" class="hero-image" width="50" height="50">
-                                <div class="image-overlay"></div>
-                            </div>
-                            <div class="hero-badge">
-                                <div class="badge-content">
-                                    <div class="badge-icon">
-                                        <i class="fas fa-leaf"></i>
-                                    </div>
-                                    <div class="badge-text">Promoter Certificata</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section Elegante -->
-        <section id="about" class="about-section">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
-                        <div class="about-image-wrapper">
-                            <div class="about-image-container">
-                                <img src="WhatsApp Image 2025-12-17 at 21.16.24.jpeg" alt="Francesca Sassone" class="about-image">
-                                <div class="image-decoration"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-7" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                        <div class="about-content">
-                            <div class="section-label">
-                                <span class="label-number">02</span>
-                                <span class="label-text">La Promoter</span>
-                            </div>
-                            
-                            <h2 class="section-title">Ciao, sono <span class="highlight">Francesca</span></h2>
-<p class="section-subtitle">ma tutti mi conoscono come <strong>La Francy YR</strong> </p>
-
-<div class="about-text">
-    <p>Dal <strong>2019</strong> sono <strong>Beauty Promoter e Consulente di Bellezza Yves Rocher</strong>, un brand che ho scelto perché unisce natura, innovazione e rispetto per l’ambiente.</p>
-    
-    <p>La mia missione è aiutarti a valorizzare la tua bellezza naturale con <strong>prodotti vegetali efficaci, sostenibili e accessibili</strong>.  Ogni persona è diversa, e per questo credo in una consulenza attenta e su misura.</p>
-
-    <p>Ogni giorno condivido <strong>consigli personalizzati</strong>, <strong>tutorial di skincare e make-up</strong> e le <strong>promozioni Yves Rocher più vantaggiose</strong>, per aiutarti a prenderti cura di te nel modo giusto.</p>
-
-    <div class="expertise-list">
-        <div class="expertise-item">
-            <div class="expertise-icon">
-                <i class="fas fa-spa"></i>
-            </div>
-            <div class="expertise-content">
-                <h4>Consigli su Misura</h4>
-                <p>Supporto personalizzato per skincare e make-up in base alle tue esigenze reali.</p>
-            </div>
-        </div>
+    <script>
+        // Imposta la data di fine manutenzione (3 giorni da ora)
+        const endDate = new Date();
+        endDate.setDate(endDate.getDate() + 3);
+        endDate.setHours(endDate.getHours() + 12);
         
-        <div class="expertise-item">
-            <div class="expertise-icon">
-                <i class="fas fa-seedling"></i>
-            </div>
-            <div class="expertise-content">
-                <h4>Cosmesi Vegetale</h4>
-                <p>Prodotti Yves Rocher a base vegetale, efficaci e rispettosi dell’ambiente.</p>
-            </div>
-        </div>
-        
-        <div class="expertise-item">
-            <div class="expertise-icon">
-                <i class="fas fa-hand-holding-heart"></i>
-            </div>
-            <div class="expertise-content">
-                <h4>Community & Social</h4>
-                <p>Seguimi su <strong>Instagram, TikTok, Facebook e Telegram</strong> per novità, offerte e idee beauty 100% vegetali </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-      
-
-        <!-- Products Section -->
-        <section id="products" class="products-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="section-label center">
-                            <span class="label-number">04</span>
-                            <span class="label-text">L'Eccellenza</span>
-                        </div>
-                        
-                        <h2 class="section-title">Prodotti Selezionati</h2>
-                        <p class="section-subtitle">Le migliori formulazioni vegetali per la tua beauty routine</p>
-                    </div>
-                </div>
-                
-                <!-- Search Bar Elegante -->
-                <div class="search-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                    <div class="search-wrapper">
-                        <i class="fas fa-search search-icon"></i>
-                        <input type="text" id="productSearch" class="form-control" placeholder="Cerca per nome, categoria o esigenza...">
-                        <div class="search-divider"></div>
-                        <button class="search-btn">
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
-                    
-                    <div class="filter-tags">
-                        <button class="tag-btn active" data-filter="all">Tutto</button>
-                        <button class="tag-btn" data-filter="viso">Viso</button>
-                        <button class="tag-btn" data-filter="corpo">Corpo</button>
-                        <button class="tag-btn" data-filter="capelli">Capelli</button>
-                        <button class="tag-btn" data-filter="makeup">Make-up</button>
-                        <button class="tag-btn" data-filter="uomo">Uomo</button>
-                    </div>
-                </div>
-                
-                <!-- Product Grid Premium -->
-                <div class="product-grid" id="productGrid">
-                    <!-- I prodotti verranno generati dinamicamente via JavaScript -->
-                </div>
-                
-                <!-- Load More Button -->
-                <div class="text-center mt-6" data-aos="fade-up" data-aos-duration="1000">
-                    <button class="btn-elegant-outline" id="loadMoreBtn">
-                        <span>Mostra Altri Prodotti</span>
-                        <div class="btn-line"></div>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Product Modal Premium -->
-        <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content elegant-modal">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close-elegant" data-bs-dismiss="modal" aria-label="Close">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="modal-product-image">
-                                    <img id="modalProductImage" src="" alt="" class="img-fluid">
-                                    <div class="product-badge" id="modalProductBadge"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="modal-product-details">
-                                    <div class="product-category" id="modalProductCategory"></div>
-                                    <h3 class="product-name" id="modalProductName"></h3>
-                                    <div class="product-price" id="modalProductPrice"></div>
-                                    
-                                    <div class="product-description" id="modalProductDescription"></div>
-                                    
-                                    <div class="product-ingredients">
-                                        <h6>Ingredienti Principali:</h6>
-                                        <div class="ingredients-tags" id="modalProductIngredients"></div>
-                                    </div>
-                                    
-                                    <div class="product-benefits">
-                                        <h6>Benefici:</h6>
-                                        <div class="benefits-list" id="modalProductBenefits"></div>
-                                    </div>
-                                               <a href="https://wa.me/+393332338660" class="btn-elegant modal-whatsapp" id="whatsappLink" target="_blank">
-                                            <i class="fab fa-whatsapp"></i>
-                                            <span>Richiedi Consulenza</span>
-                                           
-                                        </a>
-                                           
-
-                                    
-                                    <div class="product-note">
-                                        <p><i class="fas fa-leaf"></i> Formulato con ingredienti di origine vegetale. Non testato sugli animali.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Section Elegante -->
-        <section id="contact" class="contact-section">
-            <div class="contact-background">
-                <div class="bg-pattern"></div>
-            </div>
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = endDate.getTime() - now;
             
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 mx-auto" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="contact-wrapper">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="contact-info">
-                                        <div class="section-label">
-                                            <span class="label-number">05</span>
-                                            <span class="label-text">Contatti</span>
-                                        </div>
-                                        
-                                        <h2 class="section-title">Prenota una Consulenza</h2>
-                                        <p class="section-subtitle">Insieme troveremo i prodotti perfetti per te</p>
-                                        
-                                        <div class="contact-details">
-                                            <div class="contact-item">
-                                                <div class="contact-icon">
-                                                    <i class="fab fa-whatsapp"></i>
-                                                </div>
-                                                <div class="contact-content">
-                                                    <h4>WhatsApp / Telefono</h4>
-                                                    <a href="tel:+393331234567">+39 333 233 8660</a>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="contact-item">
-                                                <div class="contact-icon">
-                                                    <i class="fas fa-envelope"></i>
-                                                </div>
-                                                <div class="contact-content">
-                                                    <h4>Email</h4>
-                                                    <a href="mailto:francesca.sassone@hotmail.it">francesca.sassone@hotmail.it</a>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="contact-item">
-                                                <div class="contact-icon">
-                                                    <i class="fas fa-map-marker-alt"></i>
-                                                </div>
-                                                <div class="contact-content">
-                                                    <h4>Zona di Operatività</h4>
-                                                    <p>Bergamo e Provincia</p>
-                                                 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="contact-social">
-    <p>Seguimi sui social per consigli e novità:</p>
-    <div class="social-links">
-    <a href="https://www.instagram.com/la_francy_yr/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://www.tiktok.com/@lafranciyr?lang=it-IT" class="social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-tiktok"></i>
-    </a>
-    <a href="https://t.me/Francy74s" class="social-link" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-telegram-plane"></i>
-    </a>
-    <a href="https://wa.me/393332338660" class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="https://www.facebook.com/francesca.sassone.37" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="mailto:francesca.sassone@hotmail.it" class="social-link" aria-label="Email" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-envelope"></i>
-    </a>
-</div>
-
-</div>
-
-                                    </div>
-                                </div>
-                                
-                               <div class="col-lg-6">
-    <div class="contact-map">
-        <div class="map-container">
-            <h4>Trova il Centro Più Vicino</h4>
-            <p>Puoi trovarmi in <strong>Via Rampinelli 16, 24030 Brembate di Sopra (BG)</strong>. Clicca sulla mappa per avviare la navigazione.</p>
-
-            <div class="map-wrapper">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.693822909864!2d9.5779948!3d45.716486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478153695395c7eb%3A0x136218a66db84706!2sVia%20Rampinelli%2C%2016%2C%2024030%20Brembate%20di%20Sopra%20BG!5e0!3m2!1sit!2sit!4v1733750000000"
-                    width="100%"
-                    height="250"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-
-                <div class="map-actions">
-                    <a href="https://www.google.it/maps/place/Via+Rampinelli,+16,+24030+Brembate+di+Sopra+BG"
-                       target="_blank"
-                       class="btn-elegant-outline">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Apri su Google Maps</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-    </main>
-
-    <!-- Footer Premium -->
-    <footer class="elegant-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="row align-items-center">
-                    <div class="col-lg-4">
-                        <div class="footer-brand">
-                            <div class="brand-icon">YR</div>
-                            <div class="brand-text">
-                                <span class="brand-main">la francy</span>
-                                <span class="brand-subtitle">Promoter Yves Rocher</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 text-center">
-                        <div class="footer-quote">
-                            <p>"La bellezza nasce dalla natura e ritorna alla natura"</p>
-                            <p class="quote-author">- Yves Rocher</p>
-                        </div>
-                    </div>
-                  
-                </div>
-                
-                <div class="footer-bottom">
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <p class="copyright">© 2026 la francy - Promoter Yves Rocher. Tutti i diritti riservati. Yves Rocher è un marchio registrato.</p>
-                            <p class="disclaimer">I contenuti di questo sito sono a scopo illustrativo. Per informazioni accurate sui prodotti, contattare direttamente il promoter.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-<!-- JavaScript Libraries -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-
-<!-- Custom JavaScript -->
-<script type="text/javascript">
-    // script.js - Premium Version
-    document.addEventListener('DOMContentLoaded', function() {
+            // Calcoli per giorni, ore, minuti e secondi
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Aggiorna i valori nel DOM
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+            
+            // Se il countdown è finito
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.querySelector(".countdown").innerHTML = "<h3>Manutenzione completata! Il sito tornerà online a breve.</h3>";
+            }
+        }
         
-        // ============ INITIALIZATION ============
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100,
-            easing: 'ease-in-out'
-        });
+        // Aggiorna il countdown ogni secondo
+        const countdownInterval = setInterval(updateCountdown, 1000);
         
-        // ============ LOADING SCREEN ============
-        const loadingScreen = document.getElementById('loadingScreen');
+        // Inizializza il countdown
+        updateCountdown();
         
-        if (loadingScreen) {
-            // Simulate loading with minimum time for smooth experience
+        // Effetto di illuminazione casuale per le icone fluttuanti
+        const tools = document.querySelectorAll('.floating-tools');
+        setInterval(() => {
+            const randomTool = tools[Math.floor(Math.random() * tools.length)];
+            randomTool.style.color = '#ffcc00';
+            randomTool.style.textShadow = '0 0 15px #ffcc00';
+            
             setTimeout(() => {
-                loadingScreen.classList.add('hidden');
-                
-                // Remove from DOM after animation
-                setTimeout(() => {
-                    loadingScreen.style.display = 'none';
-                }, 800);
-            }, 1500);
-        }
+                randomTool.style.color = 'white';
+                randomTool.style.textShadow = 'none';
+            }, 500);
+        }, 2000);
         
-        // ============ NAVBAR SCROLL EFFECT ============
-        const navbar = document.getElementById('mainNav');
+        // Effetto di progresso dinamico
+        const progressBar = document.querySelector('.progress-bar');
+        const progressText = document.querySelector('.progress-text');
         
-        if (navbar) {
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 100) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-            });
-        }
+        let progress = 65;
+        let increasing = true;
         
-        // ============ SMOOTH SCROLL ============
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    const navbarToggler = document.querySelector('.navbar-toggler');
-                    const navbarCollapse = document.querySelector('.navbar-collapse');
-                    if (navbarToggler && navbarCollapse && navbarCollapse.classList.contains('show')) {
-                        navbarToggler.click();
-                    }
-                }
-            });
-        });
-        
-        // ============ PRODUCT DATA PREMIUM ============
-        const products = [
-            // ===== MAKE-UP =====
-            {
-                id: 1,
-                name: "Mascara Intense Metamorphose",
-                category: "makeup",
-                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/51685-mascara-intense-metamorphose-waterproof-yves-rocher.png?itok=EwQPJwdR",
-                badge: "24H",
-                description: "Mascara 3 in 1 da 7,8 ml che dona volume estremo, lunghezza e curvatura intensa con tenuta fino a 24 ore. Adatto a occhi sensibili e portatori di lenti a contatto.",
-                ingredients: ["Acqua di Fiordaliso Bio", "Olio di Ricino"],
-                benefits: ["Volume estremo", "Lunghezza intensa", "Curvatura definita", "Occhi sensibili"],
-                price: ""
-            },
-            {
-                id: 2,
-                name: "Teint Radiance Fondotinta Siero Natural Glow",
-                category: "makeup",
-                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-09/84919-neutre-200-tein-radiance-fondotinta-make-up-yves-rocher.png?itok=vOymFafo",
-                badge: "GLOW",
-                description: "Siero fondotinta da 30 ml che unisce make-up e skincare per una pelle più luminosa giorno dopo giorno.",
-                ingredients: ["Attivi skincare", "Pigmenti luminosi"],
-                benefits: ["Effetto naturale", "Luminosità", "Texture leggera"],
-                price: ""
-            },
-            {
-                id: 3,
-                name: "Fondotinta Opacizzante Super Mat",
-                category: "makeup",
-                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2022-02/p85117f.jpg?itok=VwubW3Qj",
-                badge: "OPACIZZANTE",
-                description: "Fondotinta opacizzante da 30 ml con coprenza modulabile e tenuta fino a 16 ore.",
-                ingredients: ["Pigmenti minerali", "Attivi opacizzanti"],
-                benefits: ["Effetto mat", "Riduce i pori", "Tenuta 16h"],
-                price: ""
-            },
-            {
-                id: 4,
-                name: "Fondotinta Zéro Défaut Idratazione 24H",
-                category: "makeup",
-                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-11/43903-rose-000-fondotinta-lunga-tenuta-zero-defaut-idratazione-24h-make-up-trucco-yves-rocher.png?itok=k7ooIacN",
-                badge: "24H",
-                description: "Fondotinta da 30 ml con coprenza media-alta modulabile e idratazione fino a 24 ore.",
-                ingredients: ["Attivi idratanti", "Pigmenti leviganti"],
-                benefits: ["Idratazione 24h", "Incarnato uniforme"],
-                price: ""
-            },
-            {
-                id: 5,
-                name: "Ombretto Lunga Tenuta",
-                category: "makeup",
-                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/40878-ombretto-lunga-tenuta-sable-dore-yves-rocher.png?itok=oyG-kyPJ",
-                badge: "LONG LASTING",
-                description: "Ombretto stylo da 1,4 g con colore intenso e madreperlato sin dalla prima applicazione.",
-                ingredients: ["Pigmenti madreperlati"],
-                benefits: ["Colore intenso", "Lunga tenuta"],
-                price: ""
-            },
-            {
-                id: 6,
-                name: "Grand Rouge L'Elixir",
-                category: "makeup",
-                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/17848-grand-rouge-elixir-nude-101-yves-rocher.png?itok=Xu29MJN8",
-                badge: "ICONICO",
-                description: "Rossetto da 7 ml con superconcentrato di attivi e colore ultra pigmentato.",
-                ingredients: ["Attivi nutrienti"],
-                benefits: ["Colore intenso", "Comfort labbra"],
-                price: ""
-            },
-            {
-                id: 7,
-                name: "Rouge Elixir Mat",
-                category: "makeup",
-                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/83036-rossetto-rouge-elixir-mat-01-yves-rocher.png?itok=cx3_Cx6P",
-                badge: "MAT",
-                description: "Rossetto mat da 3,7 g con 83% di ingredienti di origine naturale. Disponibile in 12 colori.",
-                ingredients: ["Ingredienti di origine naturale"],
-                benefits: ["Effetto mat", "Alta pigmentazione"],
-                price: ""
-            },
-            {
-                id: 8,
-                name: "Stylo Sopracciglia Alta Precisione",
-                category: "makeup",
-                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/89025-stylo-sopracciglia-alta-precisione-02-cendre-yves-rocher.png?itok=cKv4MmP0",
-                badge: "PRECISIONE",
-                description: "Stylo sopracciglia da 1 g con micro-mina e spazzolina per un risultato naturale.",
-                ingredients: ["Pigmenti naturali"],
-                benefits: ["Alta precisione", "Effetto naturale"],
-                price: ""
-            },
-
-            // ===== SKINCARE =====
-            {
-                id: 9,
-                name: "Lift Pro-Collagène Crema Anti-Rughe Notte",
-                category: "skincare",
-                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-11/46807-trattamento-anti-rughe-intenso-giorno-notte-lift-pro-collage%CC%80ne-yves-rocher.png?itok=jdRgOEaI",
-                badge: "BESTSELLER",
-                description: "Crema notte anti-rughe con Erba Cristallina Bio, Collagene Vegetale e Acido Ialuronico di origine naturale.",
-                ingredients: ["Erba Cristallina Bio", "Collagene Vegetale", "Acido Ialuronico"],
-                benefits: ["Effetto lifting", "Riduzione rughe in 4 settimane", "98% origine naturale"],
-                price: ""
-            },
-            {
-                id: 10,
-                name: "Set Viso Lift Pro-Collagène Completo",
-                category: "skincare",
-                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-08/y12350-set-viso-lift-pro-collage%CC%80ne-yves-rocher.png?itok=aF0tt0IL",
-                badge: "OFFERTA",
-                description: "Set viso anti-age con crema giorno, crema notte e siero per un trattamento completo.",
-                ingredients: [],
-                benefits: ["3 prodotti", "Formula vegan"],
-                price: ""
-            },
-            {
-                id: 11,
-                name: "Anti-Age Global Trattamento Rigenerante Supremo",
-                category: "skincare",
-                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/650x650/public/2025-11/56413-trattamento-rigenerante-supremo-giorno-notte-anti-age-global-yves-rocher.png?itok=mswVU9Kw",
-                badge: "NUOVO",
-                description: "Trattamento 3 in 1 che agisce come crema giorno, crema notte e maschera notte.",
-                ingredients: [],
-                benefits: ["Effetto luminosità", "Adatto a tutte le pelli"],
-                price: ""
-            },
-            {
-                id: 12,
-                name: "Pure Algue Gel Detergente Freschezza",
-                category: "skincare",
-                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-08/19045-gel-detergente-freschezza-pure-algue-viso-yves-rocher.png?itok=rsISns3H",
-                description: "Gel detergente ultra-fresco con il 98% di ingredienti di origine naturale.",
-                ingredients: [],
-                benefits: ["Senza sapone", "pH fisiologico"],
-                price: ""
-            },
-            {
-                id: 13,
-                name: "Glow Energie Maschera Peeling Luminosità",
-                category: "skincare",
-                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-08/91955-maschera-peeling-luminosita%CC%80-glow-energie-viso-yves-rocher.png?itok=cybNV_KK",
-                badge: "POPOLARE",
-                description: "Maschera peeling illuminante con AHA naturali e Nasturzio Arancione.",
-                ingredients: ["AHA naturali", "Nasturzio Arancione"],
-                benefits: ["Effetto glow immediato", "Applicazione 5 minuti"],
-                price: ""
-            },
-
-            // ===== CORPO & CAPELLI =====
-            {
-                id: 14,
-                name: "Monoï Shampoo Doccia Delicato",
-                category: "capelli",
-                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/08907-Shampoo-doccia-delicato-monoi-yves-rocher.png?itok=m_JlWwBx",
-                description: "Shampoo doccia profumato al Monoï per pelle e capelli.",
-                ingredients: [],
-                benefits: ["Doppio uso", "Formula delicata"],
-                price: ""
-            },
-            {
-                id: 15,
-                name: "Burro Soufflé Corpo Ultra Nutriente",
-                category: "corpo",
-                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-07/05473-burro-souffle%CC%81-corpo-ultra-nutriente-yves-rocher.png?itok=UW4WTg9w",
-                badge: "IDRATAZIONE",
-                description: "Crema corpo ultra nutriente con burro di Karité e idratazione fino a 48 ore.",
-                ingredients: ["Burro di Karité"],
-                benefits: ["Idratazione 48h", "Texture non unta"],
-                price: ""
-            },
-            {
-                id: 16,
-                name: "Purezza Shampoo Secco Purificante",
-                category: "capelli",
-                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-08/93820-shampoo-secco-purificante-linea-purezza-capelli-yves-rocher.png?itok=jpkgg4yZ",
-                badge: "PRATICO",
-                description: "Shampoo secco purificante che assorbe il sebo in 30 secondi.",
-                ingredients: [],
-                benefits: ["Senza risciacquo", "Volume immediato"],
-                price: ""
-            },
-
-            // ===== OFFERTE =====
-            {
-                id: 17,
-                name: "Set Corpo & Mani Regalo",
-                category: "offerte",
-                image: "https://www.yves-rocher.it/sites/www.yves-rocher.it/files/styles/400x400/public/2025-08/y12354-set-corpo-mani-yves-rocher.png?itok=0FGSyjbB",
-                badge: "REGALO",
-                description: "Set regalo con prodotti corpo e mani in confezione speciale.",
-                ingredients: [],
-                benefits: ["Ideale come regalo", "Confezione inclusa"],
-                price: ""
-            }
-        ];
-        
-        // ============ PRODUCT RENDERING PREMIUM ============
-        const productGrid = document.getElementById('productGrid');
-        const productSearch = document.getElementById('productSearch');
-        const filterButtons = document.querySelectorAll('.tag-btn');
-        const loadMoreBtn = document.getElementById('loadMoreBtn');
-        
-        let displayedProducts = 4;
-        let currentFilter = 'all';
-        
-        function renderProducts(filter = 'all', searchTerm = '') {
-            if (!productGrid) return;
-            
-            productGrid.innerHTML = '';
-            
-            const filteredProducts = products.filter(product => {
-                const matchesFilter = filter === 'all' || product.category === filter;
-                const matchesSearch = searchTerm === '' || 
-                    product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    product.category.toLowerCase().includes(searchTerm.toLowerCase());
-                
-                return matchesFilter && matchesSearch;
-            });
-            
-            // Show only limited number of products initially
-            const productsToShow = filteredProducts.slice(0, displayedProducts);
-            
-            productsToShow.forEach(product => {
-                const productCard = document.createElement('div');
-                productCard.className = 'product-card-elegant';
-                productCard.setAttribute('data-category', product.category);
-                productCard.setAttribute('data-aos', 'fade-up');
-                
-                productCard.innerHTML = `
-                    ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
-                    <div class="product-image">
-                        <img src="${product.image}" alt="${product.name}" loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <div class="product-category">${product.category.toUpperCase()}</div>
-                        <h3 class="product-name">${product.name}</h3>
-                        <p class="product-description">${product.description}</p>
-                
-                        <div class="product-actions">
-                            <button class="btn-details-elegant view-product" data-id="${product.id}">
-                                <i class="fas fa-eye"></i>
-                                <span>Dettagli</span>
-                            </button>
-                            <a href="https://wa.me/393332338660?text=Salve%20Francesca,%20vorrei%20informazioni%20su%20${encodeURIComponent(product.name)}" 
-                               class="btn-whatsapp-elegant" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </div>
-                    </div>
-                `;
-                
-                productGrid.appendChild(productCard);
-            });
-            
-            // Show/hide load more button
-            if (loadMoreBtn) {
-                if (filteredProducts.length > displayedProducts) {
-                    loadMoreBtn.style.display = 'inline-flex';
-                } else {
-                    loadMoreBtn.style.display = 'none';
-                }
+        setInterval(() => {
+            if (increasing) {
+                progress += 0.1;
+                if (progress >= 85) increasing = false;
+            } else {
+                progress -= 0.1;
+                if (progress <= 65) increasing = true;
             }
             
-            // Reinitialize AOS for new elements
-            AOS.refresh();
-            
-            // Add event listeners to new product buttons
-            document.querySelectorAll('.view-product').forEach(button => {
-                button.addEventListener('click', function() {
-                    const productId = parseInt(this.getAttribute('data-id'));
-                    openProductModal(productId);
-                });
-            });
-        }
-        
-        // Initial render
-        renderProducts();
-        
-        // ============ FILTER PRODUCTS ============
-        if (filterButtons) {
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Update active filter
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    currentFilter = this.getAttribute('data-filter');
-                    displayedProducts = 4; // Reset displayed products
-                    
-                    renderProducts(currentFilter, productSearch ? productSearch.value : '');
-                });
-            });
-        }
-        
-        // ============ SEARCH PRODUCTS ============
-        if (productSearch) {
-            productSearch.addEventListener('input', function() {
-                displayedProducts = 4; // Reset displayed products
-                renderProducts(currentFilter, this.value);
-            });
-        }
-        
-        // ============ LOAD MORE PRODUCTS ============
-        if (loadMoreBtn) {
-            loadMoreBtn.addEventListener('click', function() {
-                displayedProducts += 4;
-                renderProducts(currentFilter, productSearch ? productSearch.value : '');
-                
-                // Smooth scroll to new products
-                setTimeout(() => {
-                    if (productGrid) {
-                        productGrid.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'end'
-                        });
-                    }
-                }, 300);
-            });
-        }
-        
-        // ============ PRODUCT MODAL PREMIUM ============
-        const productModalElement = document.getElementById('productModal');
-        let productModal = null;
-        
-        if (productModalElement) {
-            productModal = new bootstrap.Modal(productModalElement);
-        }
-        
-        function openProductModal(productId) {
-            const product = products.find(p => p.id === productId);
-            if (!product || !productModal) return;
-            
-            // Set modal content
-            const modalProductName = document.getElementById('modalProductName');
-            const modalProductImage = document.getElementById('modalProductImage');
-            const modalProductBadge = document.getElementById('modalProductBadge');
-            const modalProductCategory = document.getElementById('modalProductCategory');
-            const modalProductPrice = document.getElementById('modalProductPrice');
-            const modalProductDescription = document.getElementById('modalProductDescription');
-            const modalProductIngredients = document.getElementById('modalProductIngredients');
-            const modalProductBenefits = document.getElementById('modalProductBenefits');
-            const whatsappLink = document.getElementById('whatsappLink');
-            
-            if (modalProductName) modalProductName.textContent = product.name;
-            if (modalProductImage) {
-                modalProductImage.src = product.image;
-                modalProductImage.alt = product.name;
-            }
-            if (modalProductBadge) modalProductBadge.textContent = product.badge || '';
-            if (modalProductCategory) modalProductCategory.textContent = product.category.toUpperCase();
-            if (modalProductPrice) modalProductPrice.textContent = product.price || '';
-            if (modalProductDescription) modalProductDescription.textContent = product.description;
-            
-            // Set ingredients
-            if (modalProductIngredients) {
-                modalProductIngredients.innerHTML = '';
-                if (product.ingredients && product.ingredients.length > 0) {
-                    product.ingredients.forEach(ingredient => {
-                        const span = document.createElement('span');
-                        span.textContent = ingredient;
-                        modalProductIngredients.appendChild(span);
-                    });
-                }
-            }
-            
-            // Set benefits
-            if (modalProductBenefits) {
-                modalProductBenefits.innerHTML = '';
-                if (product.benefits && product.benefits.length > 0) {
-                    product.benefits.forEach(benefit => {
-                        const span = document.createElement('span');
-                        span.innerHTML = `<i class="fas fa-check"></i> ${benefit}`;
-                        modalProductBenefits.appendChild(span);
-                    });
-                }
-            }
-            
-            // Update WhatsApp link
-            if (whatsappLink) {
-                const message = `Salve Francesca, vorrei informazioni su ${product.name}${product.price ? ' (' + product.price + ')' : ''} - lafranciyr.github.io`;
-                whatsappLink.href = `https://wa.me/393332338660?text=${encodeURIComponent(message)}`;
-            }
-            
-            // Show modal with animation
-            productModal.show();
-        }
-        
-        // ============ GSAP ANIMATIONS PREMIUM ============
-        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-            gsap.registerPlugin(ScrollTrigger);
-            
-            // Hero title animation
-            const heroTitle = document.querySelector('.hero-title span');
-            if (heroTitle) {
-                gsap.from('.hero-title span', {
-                    duration: 1.2,
-                    y: 60,
-                    opacity: 0,
-                    stagger: 0.2,
-                    ease: "power3.out"
-                });
-            }
-            
-            // Hero image animation
-            const heroImage = document.querySelector('.hero-image');
-            if (heroImage) {
-                gsap.from('.hero-image', {
-                    duration: 1.5,
-                    scale: 1.1,
-                    opacity: 0,
-                    ease: "power3.out"
-                });
-            }
-            
-            // Floating elements animation
-            const floatingElements = document.querySelector('.floating-botanical');
-            if (floatingElements) {
-                gsap.to('.floating-botanical', {
-                    y: 30,
-                    duration: 3,
-                    repeat: -1,
-                    yoyo: true,
-                    ease: "sine.inOut"
-                });
-            }
-            
-            // Parallax effect for sections
-            gsap.utils.toArray('section').forEach(section => {
-                const bg = section.querySelector('.bg-texture, .philosophy-background, .contact-background');
-                if (bg) {
-                    gsap.to(bg, {
-                        y: (i, target) => -ScrollTrigger.maxScroll(window) * 0.1,
-                        ease: "none",
-                        scrollTrigger: {
-                            trigger: section,
-                            start: "top top",
-                            end: "bottom top",
-                            scrub: true
-                        }
-                    });
-                }
-            });
-            
-            // Animate cards on scroll
-            const cards = document.querySelectorAll('.philosophy-card, .product-card-elegant');
-            if (cards.length > 0) {
-                gsap.utils.toArray('.philosophy-card, .product-card-elegant').forEach(card => {
-                    gsap.from(card, {
-                        scrollTrigger: {
-                            trigger: card,
-                            start: 'top 80%',
-                            end: 'bottom 20%',
-                            toggleActions: 'play none none reverse'
-                        },
-                        y: 50,
-                        opacity: 0,
-                        duration: 0.8,
-                        ease: "power3.out"
-                    });
-                });
-            }
-        }
-        
-        // ============ INTERACTIVE MAP ============
-        const mapOverlay = document.querySelector('.map-overlay');
-        if (mapOverlay) {
-            mapOverlay.addEventListener('click', function() {
-                if (typeof gsap !== 'undefined') {
-                    gsap.to(this, {
-                        opacity: 0,
-                        duration: 0.5,
-                        onComplete: () => {
-                            this.style.display = 'none';
-                        }
-                    });
-                } else {
-                    this.style.display = 'none';
-                }
-            });
-        }
-        
-        // ============ RESPONSIVE ADJUSTMENTS ============
-        function handleResize() {
-            // Adjust grid columns based on screen size
-            if (productGrid) {
-                if (window.innerWidth < 768) {
-                    productGrid.style.gridTemplateColumns = '1fr';
-                } else if (window.innerWidth < 1200) {
-                    productGrid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(280px, 1fr))';
-                } else {
-                    productGrid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(300px, 1fr))';
-                }
-            }
-        }
-        
-        window.addEventListener('resize', handleResize);
-        if (productGrid) handleResize(); // Initial call
-        
-        // ============ LAZY LOADING FOR IMAGES ============
-        const lazyImages = document.querySelectorAll('img[data-src]');
-        
-        if ('IntersectionObserver' in window && lazyImages.length > 0) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.add('loaded');
-                        observer.unobserve(img);
-                    }
-                });
-            });
-            
-            lazyImages.forEach(img => {
-                if (img.dataset.src) {
-                    imageObserver.observe(img);
-                }
-            });
-        }
-        
-        // ============ SMOOTH SCROLL FOR NAVIGATION ============
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    // Close mobile menu if open
-                    const navbarCollapse = document.querySelector('.navbar-collapse');
-                    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-                        const navbarToggler = document.querySelector('.navbar-toggler');
-                        if (navbarToggler) navbarToggler.click();
-                    }
-                    
-                    // Smooth scroll
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Update active link
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-                }
-            });
-        });
-        
-        // Update active link on scroll
-        window.addEventListener('scroll', () => {
-            let current = '';
-            const sections = document.querySelectorAll('section[id]');
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (window.scrollY >= sectionTop - 150) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-        
-        console.log('Sito Premium "la francy" Yves Rocher inizializzato con successo!');
-    });
-</script>
+            progressBar.style.width = progress + '%';
+            progressText.textContent = Math.round(progress) + '% Completato';
+        }, 100);
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
